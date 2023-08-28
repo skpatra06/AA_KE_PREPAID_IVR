@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<connector id="Element@695105664:1644565294634" name="AA_PRP_XX_HA_0028B_DB" version="6.0.1">
+<connector id="Element@777343563:1693247087030" name="AA_PRP1_XX_HA_0304_DB" version="6.0.1">
 <subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644565308738">
 <config>
 <argument_data>
-<data name="HID">AM_Profile_KYC_Request</data>
+<data name="HID">AM_UserInfo_Request</data>
 </argument_data>
 <input_data>
 <data name="S_ERROR_MSG"/>

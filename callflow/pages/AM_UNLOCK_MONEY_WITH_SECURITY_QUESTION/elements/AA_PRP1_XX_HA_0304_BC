@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@264613760:1693247087030" name="AA_PRP1_XX_HA_0304_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.amservices.Check_Airtel_Money_User_Info_Question_Balance</source>
+</config>
+</decision>

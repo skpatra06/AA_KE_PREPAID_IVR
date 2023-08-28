@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@597159026:1693247087030" name="AA_PRP1_XX_HA_0306_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.amservices.Check_Airtel_Money_Block_By_Invalid_Pin</source>
+</config>
+</decision>

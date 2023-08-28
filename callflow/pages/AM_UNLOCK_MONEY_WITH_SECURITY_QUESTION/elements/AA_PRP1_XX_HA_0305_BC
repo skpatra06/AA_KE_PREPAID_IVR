@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1455599932:1693247087030" name="AA_PRP1_XX_HA_0305_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.amservices.AM_Last_Sim_Swap_Date_Check</source>
+</config>
+</decision>

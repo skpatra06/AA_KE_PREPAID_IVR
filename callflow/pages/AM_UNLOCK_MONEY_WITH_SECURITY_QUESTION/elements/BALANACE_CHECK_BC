@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<decision id="Element@1725507939:1657186600147" name="BALANACE_CHECK_BC" version="6.0.1">
-<config>
-<source type="Class">com.common.amservices.Check_AM_Wallet_Balance</source>
-</config>
-</decision>
