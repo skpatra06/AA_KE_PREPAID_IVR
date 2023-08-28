@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1895539767:1644993658240" name="AA_PRP_XX_HA_0015_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.recharge.Recharge_Services_App_Transaction</source>
+</config>
+</decision>

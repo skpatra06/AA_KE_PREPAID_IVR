@@ -1,0 +1,13 @@
+<menu>
+	<settings>
+		<setting name="dtmf_keypress">1,2</setting>
+    </settings>	
+	
+	<audiogroups>
+		<audiogroup name="initial_audio_group" count="1">				
+			<audioitem>AA_PRP_CP_0041.wav@press1.wav></audioitem>
+			<audioitem>AA_PRP_CP_0042.wav@press2.wav></audioitem>
+		</audiogroup>			
+	</audiogroups>
+
+</menu>

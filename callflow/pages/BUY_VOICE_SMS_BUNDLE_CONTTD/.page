@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@89658287:1644435843027" name="BUY_VOICE_SMS_BUNDLE_CONTTD" version="6.0.1">
+<element height="46" id="Element@1504523073:1644435843027" name="BUY_VOICE_SMS_BUNDLE_CONTTD_PE" type="Page Entry" width="256" x="328" y="56">
+<exit_states>
+<exit_state name="next" target="Element@2094549412:1644435929601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@539298859:1644435929601" name="AIRTEL_MONEY_PIN_CHECK_PE" type="Page Connector" width="217" x="482" y="282">
+<page_connector target="Element@137601278:1644302282037">AIRTEL_MONEY_PIN_CHECK_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1086525075:1644435929601" name="AA_PRP_XX_MN_0055_DM" src="ServionCombTriesForm" type="Voice Element" width="189" x="292" y="723">
+<exit_states>
+<exit_state name="done" target="Element@1566048919:1644435929581"/>
+<exit_state name="max_nomatch" target="Element@153896098:1644435929601"/>
+<exit_state name="max_noinput" target="Element@153896098:1644435929601">
+<bendpoint>
+<dim1 x="50" y="67"/>
+<dim2 x="-183" y="0"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@153896098:1644435929601">
+<bendpoint>
+<dim1 x="238" y="4"/>
+<dim2 x="23" y="-66"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@4642884:1644435929601" name="GLOBAL_PROMPT_2_PE" type="Page Connector" width="175" x="1203" y="559">
+<page_connector target="Element@1574626982:1644299708437">GLOBAL_PROMPT_2_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@153896098:1644435929601" name="MaxTries_PE" type="Page Connector" width="140" x="558" y="792">
+<page_connector target="Element@2083153167:1644263127724">MaxTries_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@350631547:1644435929601" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="917" y="271">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1191869058:1644435929581" name="GLOBAL_PROMPT_2_PE" type="Page Connector" width="175" x="28" y="650">
+<page_connector target="Element@1574626982:1644299708437">GLOBAL_PROMPT_2_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1025171327:1644435929581" name="SMS_API_10020" type="Subflow Call" width="131" x="1222" y="464">
+<subflow_call subflow_name="SMS_GATEWAY" target="Element@31:1644314857774">
+<config>
+<argument_data>
+<data name="SMS_ID">SMS_API_10020</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@4642884:1644435929601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@676557605:1644435929601" name="AA_PRP_XX_HA_0049_DB" type="Subflow Call" width="231" x="781" y="136">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644397324805">
+<config>
+<argument_data>
+<data name="HID"/>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1637342642:1644435929601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1055728468:1644435929601" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="26" y="457">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1028961221:1644435929601" name="VoiceSMSBundleCheckBalance_BC" type="Decision" width="232" x="269" y="648">
+<exit_states>
+<exit_state name="Yes" target="Element@1086525075:1644435929601"/>
+<exit_state name="No" target="Element@1191869058:1644435929581"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2094549412:1644435929601" name="AA_PRP_XX_MN_0054_BC" type="Decision" width="234" x="338" y="193">
+<exit_states>
+<exit_state name="1" target="Element@2005235212:1644435929601"/>
+<exit_state name="2" target="Element@539298859:1644435929601"/>
+<exit_state name="hash" target="Element@1150074490:1644435975333"/>
+</exit_states>
+</element>
+<element height="46" id="Element@480912785:1644435929601" name="AA_PRP_XX_HA_0050A_BC" type="Decision" width="239" x="818" y="371">
+<exit_states>
+<exit_state name="Success" target="Element@872521232:1644435929581"/>
+<exit_state name="Failure" target="Element@350631547:1644435929601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1566048919:1644435929581" name="AA_PRP_XX_MN_0055_BC" type="Decision" width="234" x="263" y="848">
+<exit_states>
+<exit_state name="1" target="Element@2023452019:1644435929581">
+<bendpoint>
+<dim1 x="335" y="-8"/>
+<dim2 x="-14" y="378"/>
+</bendpoint>
+</exit_state>
+<exit_state name="2" target="Element@1191869058:1644435929581">
+<bendpoint>
+<dim1 x="-375" y="1"/>
+<dim2 x="-110" y="199"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-373" y="-146"/>
+<dim2 x="-108" y="52"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@872521232:1644435929581" name="AA_PRP_XX_PA_0046_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="227" x="1173" y="366">
+<exit_states>
+<exit_state name="done" target="Element@1025171327:1644435929581"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1637342642:1644435929601" name="AA_PRP_XX_HA_0049_BC" type="Decision" width="231" x="781" y="206">
+<exit_states>
+<exit_state name="Success" target="Element@1518579140:1645429005490"/>
+<exit_state name="Failure" target="Element@744286908:1644435929601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@94198904:1644435929601" name="AA_PRP_XX_PA_0045_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="227" x="266" y="446">
+<exit_states>
+<exit_state name="done" target="Element@2118161363:1645429086025"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1876376232:1644435929601" name="AA_PRP_XX_HA_0048_BC" type="Decision" width="231" x="165" y="361">
+<exit_states>
+<exit_state name="Success" target="Element@1518579140:1645429005490"/>
+<exit_state name="Failure" target="Element@1055728468:1644435929601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2004245044:1644435929601" name="BuyVoiceSMSBundle_RET_PE" type="Page Entry" width="274" x="757" y="62">
+<exit_states>
+<exit_state name="next" target="Element@676557605:1644435929601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@744286908:1644435929601" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="1080" y="201">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2023452019:1644435929581" name="AA_PRP_XX_HA_0050A_DB" type="Subflow Call" width="239" x="687" y="466">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644396918120">
+<config>
+<argument_data>
+<data name="HID"/>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@480912785:1644435929601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2005235212:1644435929601" name="AA_PRP_XX_HA_0048_DB" type="Subflow Call" width="231" x="169" y="285">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644396918120">
+<config>
+<argument_data>
+<data name="HID"/>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1876376232:1644435929601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1150074490:1644435975333" name="MENU_RETURN_PE" type="Page Connector" width="180" x="35" y="168">
+<page_connector target="Element@1013867995:1644911551951">MENU_RETURN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@278177367:1644898781278" name="AA_PRP_XX_MN_0055_PE" type="Page Entry" width="183" x="24" y="747">
+<exit_states>
+<exit_state name="next" target="Element@1086525075:1644435929601"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1518579140:1645429005490" name="BUN_AMT_BAL_CHECK_BC" type="Decision" width="193" x="516" y="378">
+<exit_states>
+<exit_state name="Y" target="Element@94198904:1644435929601"/>
+<exit_state name="N" target="Element@2023452019:1644435929581"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2118161363:1645429086025" name="PYMNT_MODE_CHECK_BC" type="Decision" width="192" x="270" y="552">
+<exit_states>
+<exit_state name="Airtime" target="Element@1028961221:1644435929601">
+<bendpoint>
+<dim1 x="-23" y="59"/>
+<dim2 x="-39" y="-37"/>
+</bendpoint>
+</exit_state>
+<exit_state name="AirtelMoney" target="Element@1028961221:1644435929601">
+<bendpoint>
+<dim1 x="84" y="62"/>
+<dim2 x="68" y="-34"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

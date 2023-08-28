@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1322272362:1644558091480" name="AA_PRP_XX_HA_0022_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.recharge.ME2U_Transfer_Serivce</source>
+</config>
+</decision>

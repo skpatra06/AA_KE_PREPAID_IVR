@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@91376570:1649099099835" name="UNBARRING_NO_VALIDATION_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.digitcondition.NumberValidation</source>
+</config>
+</decision>

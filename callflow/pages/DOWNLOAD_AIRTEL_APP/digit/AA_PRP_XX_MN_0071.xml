@@ -1,0 +1,27 @@
+<digit>    
+	<settings>
+	  <setting name="interdigittimeout">3s</setting>	
+	  <setting name="termtimeout">1s</setting>
+	  <setting name="min_digit">10</setting>
+	  <setting name="max_digit">10</setting>
+	 <!-- <setting name="valid_length">1-14-16</setting>
+	  <setting name="secure_logging">true</setting>-->
+	</settings>
+	<reservefields>
+      <reserve name="digitvalue">S_AMPIN</reserve>
+	</reservefields>	
+	<audiogroups>
+	  <audiogroup name="initial_audio_group" count="1">
+		<audioitem>AA_PRP_CP_0250.wav</audioitem>
+	  </audiogroup>
+	</audiogroups> 
+	 <!--<elementexit>
+		<!--<exit name="max_combinedtries">
+		</exit>
+		<exit name="max_nomatch">
+		</exit>
+		<exit name="max_noinput">
+		</exit>
+		<exit name="done"></exit>
+	 </elementexit>-->
+</digit>

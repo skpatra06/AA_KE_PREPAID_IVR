@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1616723496:1644473627885" name="D_AA_PRP_XX_MN_0059_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.vas.Vas_Subscribe_CheckUserchoice</source>
+</config>
+</decision>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1209559624:1648576817643" name="CT_MENU_ROUTER_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CT_MENU_ROUTER_BC" default_exit_state="ManiMenu">
+        <exit_state name="Data_Bundle" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CT_TYPE" />
+                </data>
+                <constant_string value="Data_Bundle" />
+            </string>
+        </exit_state>
+        <exit_state name="Voice_Bundle" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CT_TYPE" />
+                </data>
+                <constant_string value="Voice_Bundle" />
+            </string>
+        </exit_state>
+        <exit_state name="GSM_Bal" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CT_TYPE" />
+                </data>
+                <constant_string value="GSM_Bal" />
+            </string>
+        </exit_state>
+        <exit_state name="AM_Unlock" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CT_TYPE" />
+                </data>
+                <constant_string value="AM_Unlock" />
+            </string>
+        </exit_state>
+        <exit_state name="Open_Ticket" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_CT_TYPE" />
+                </data>
+                <constant_string value="Open_Ticket" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

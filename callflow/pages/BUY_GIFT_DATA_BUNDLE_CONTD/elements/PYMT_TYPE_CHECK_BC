@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@880219488:1661668392993" name="PYMT_TYPE_CHECK_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="PYMT_TYPE_CHECK_BC" default_exit_state="Airtime">
+        <exit_state name="Airtel_Money" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PAYMENT_MODE" />
+                </data>
+                <constant_string value="AIRTEL_MONEY" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="S_BUNDLE_AIRTIME_FLAG" />
+                </data>
+                <constant_string value="Y" />
+            </string>
+        </exit_state>
+        <exit_state name="NA" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PAYMENT_MODE" />
+                </data>
+                <constant_string value="NA" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

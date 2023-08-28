@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@360720616:1644524961797" name="AA_PRP_XX_HA_0013A_DB" version="6.0.1">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644525055316">
+<config>
+<argument_data>
+<data name="HID">Subscriber_Transaction_Recharge_History</data>
+</argument_data>
+<input_data>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+<data name="S_ERROR_MSG"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

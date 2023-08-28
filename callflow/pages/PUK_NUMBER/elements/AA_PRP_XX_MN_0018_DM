@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@310702827:1647452048573" name="AA_PRP_XX_MN_0018_DM" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.airtel.core.DigitElementEntry</dynamic>
+<settings>
+<setting name="inputmode">dtmf</setting>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">1</setting>
+<setting name="max_nomatch_count">1</setting>
+<setting name="min_digit"/>
+<setting name="max_digit"/>
+<setting name="modal">false</setting>
+<setting name="secure_logging">false</setting>
+<setting name="dtmf_overlay">false</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri=""/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="After" name="S_PREVIOUS_PAGE">PUK_MENU</data>
+<data create_when="Before" name="S_STR_ELEMENTNAME">AA_PRP_XX_MN_0018_DM</data>
+<data create_when="Before" name="S_MENU_ELEMENT_AFTER_DIGIT">null</data>
+</session_data>
+</config>
+</voice_element>

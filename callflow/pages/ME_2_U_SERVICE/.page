@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@970642732:1644524794387" name="ME_2_U_SERVICE" version="6.0.1">
+<element height="46" id="Element@2126900014:1644524794387" name="ME_2_U_SERVICE_PE" type="Page Entry" width="157" x="356" y="31">
+<exit_states>
+<exit_state name="next" target="Element@1013666335:1644555825002"/>
+</exit_states>
+</element>
+<element height="46" id="Element@849351488:1644555825002" name="AA_PRP_XX_MN_0025_PE" type="Page Entry" width="183" x="106" y="93">
+<exit_states>
+<exit_state name="next" target="Element@1013666335:1644555825002"/>
+</exit_states>
+</element>
+<element height="46" id="Element@667938678:1644555825002" name="AA_PRP_XX_MN_0025_BC" type="Decision" width="185" x="360" y="205">
+<exit_states>
+<exit_state name="1" target="Element@89751798:1644555825002"/>
+<exit_state name="STAR" target="Element@1029765119:1644555825002"/>
+<exit_state name="2" target="Element@276830036:1652281334305"/>
+<exit_state name="3" target="Element@1618077771:1652281334305"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1104329274:1644555825002" name="MaxTries_PE" type="Page Connector" width="140" x="694" y="112">
+<page_connector target="Element@2083153167:1644263127724">MaxTries_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1029765119:1644555825002" name="PREPAID_MAIN_MENU_PE" type="Page Connector" width="188" x="106" y="208">
+<page_connector target="Element@723358145:1644522701421">PREPAID_MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@89751798:1644555825002" name="ME_2_U_AMOUNT_TRANSFER_PE" type="Page Connector" width="225" x="187" y="332">
+<page_connector target="Element@1213253854:1644556037488">ME_2_U_AMOUNT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1013666335:1644555825002" name="AA_PRP_XX_MN_0025_DM" src="ServionCombTriesForm" type="Voice Element" width="189" x="351" y="118">
+<exit_states>
+<exit_state name="done" target="Element@667938678:1644555825002"/>
+<exit_state name="max_nomatch" target="Element@1104329274:1644555825002"/>
+<exit_state name="max_noinput" target="Element@1104329274:1644555825002">
+<bendpoint>
+<dim1 x="204" y="44"/>
+<dim2 x="-152" y="22"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@1104329274:1644555825002">
+<bendpoint>
+<dim1 x="216" y="-46"/>
+<dim2 x="-103" y="-40"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1618077771:1652281334305" name="ME_2_U_PIN_CHANGE_PE" type="Page Connector" width="225" x="702" y="316">
+<page_connector target="Element@1029196297:1644563515556">ME_2_U_PIN_CHANGE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@276830036:1652281334305" name="ME_2_U_DATA_TRANSFER_PE" type="Page Connector" width="225" x="434" y="326">
+<page_connector target="Element@2059680588:1645707012246">ME_2_U_DATA_TRANSFER_PE<config/>
+</page_connector>
+</element>
+</page>

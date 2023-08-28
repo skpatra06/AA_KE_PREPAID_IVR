@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1851947562:1644291541022" name="CUSTOMER_SEGMENTATION_PE" version="6.0.1">
+<element height="46" id="Element@1113490726:1645554481729" name="CUSTOMER_SEGMENTATION_PE" type="Page Entry" width="242" x="304" y="-70">
+<exit_states>
+<exit_state name="next" target="Element@176279547:1646763833152"/>
+</exit_states>
+</element>
+<element height="46" id="Element@160999740:1645554566467" name="CALLER_SHORT_CODE_CHECK_BC" type="Decision" width="231" x="327" y="178">
+<exit_states>
+<exit_state name="AIRTEL_MONEY" target="Element@1423511737:1645554566467"/>
+<exit_state name="PREPAID" target="Element@517424626:1645554566467"/>
+</exit_states>
+</element>
+<element height="46" id="Element@517424626:1645554566467" name="PREPAID_MAIN_MENU_PE" type="Page Connector" width="188" x="241" y="293">
+<page_connector target="Element@723358145:1644522701421">PREPAID_MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1423511737:1645554566467" name="AIRTEL_MONEY_SERVICES_PE" type="Page Connector" width="204" x="484" y="296">
+<page_connector target="Element@1321329658:1644293409281">AIRTEL_MONEY_SERVICES_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1235555514:1645554592290" name="VIP_SME_DIAMOND_CHECK_BC" type="Decision" width="260" x="296" y="99">
+<exit_states>
+<exit_state name="YES" target="Element@1171972715:1645554742940"/>
+<exit_state name="NO" target="Element@160999740:1645554566467"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1171972715:1645554742940" name="VIP_DIAMOND_SME_CALLER_MENU_PE" type="Page Connector" width="291" x="649" y="108">
+<page_connector target="Element@1089832597:1644524164930">VIP_DIAMOND_SME_CALLER_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@176279547:1646763833152" name="CONTEXTUAL_TEASER_CHECK_PE" type="Page Connector" width="228" x="257" y="-2">
+<page_connector target="Element@566586737:1644523818398">CONTEXTUAL_TEASER_CHECK_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2120798304:1646763844885" name="CUST_SEG_RET_PE" type="Page Entry" width="145" x="598" y="32">
+<exit_states>
+<exit_state name="next" target="Element@1235555514:1645554592290"/>
+</exit_states>
+</element>
+</page>

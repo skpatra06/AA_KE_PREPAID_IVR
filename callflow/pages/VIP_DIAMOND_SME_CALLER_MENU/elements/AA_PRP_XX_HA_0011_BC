@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@418965887:1644524243563" name="AA_PRP_XX_HA_0011_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.start.Get_VIPToAgent</source>
+</config>
+</decision>

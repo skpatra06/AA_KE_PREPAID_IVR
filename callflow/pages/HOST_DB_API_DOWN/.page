@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@978548868:1644297540776" name="HOST_DB_API_DOWN" version="6.0.1">
+<element height="46" id="Element@188223681:1644297540776" name="HOST_DB_API_DOWN_PE" type="Page Entry" width="183" x="333" y="37">
+<exit_states>
+<exit_state name="next" target="Element@1831754026:1644572550972"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1831754026:1644572550972" name="API_DBFailure_ErrorCode_BC" type="Decision" width="232" x="309" y="133">
+<exit_states>
+<exit_state name="API_DBFailure" target="Element@352304636:1644572550972"/>
+<exit_state name="ErrorCode" target="Element@1739043496:1644572550972"/>
+</exit_states>
+</element>
+<element height="46" id="Element@352304636:1644572550972" name="AA_PRP_XX_PA_0058_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="225" y="249">
+<exit_states>
+<exit_state name="done" target="Element@2119606767:1655914489180"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1739043496:1644572550972" name="AA_PRP_XX_PA_0059_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="460" y="245">
+<exit_states>
+<exit_state name="done" target="Element@2119606767:1655914489180"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2044505966:1644572550972" name="GLOBAL_PROMPT_1_PE" type="Page Connector" width="175" x="207" y="543">
+<page_connector target="Element@769700759:1644297755601">GLOBAL_PROMPT_1_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1420185000:1655276450543" name="GP_CONFIG_CHECK_BC" type="Decision" width="176" x="345" y="420">
+<exit_states>
+<exit_state name="GP1" target="Element@2044505966:1644572550972"/>
+<exit_state name="GP2" target="Element@208434899:1655276460181"/>
+</exit_states>
+</element>
+<element height="46" id="Element@208434899:1655276460181" name="GLOBAL_PROMPT_2_PE" type="Page Connector" width="175" x="480" y="541">
+<page_connector target="Element@1574626982:1644299708437">GLOBAL_PROMPT_2_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2119606767:1655914489180" name="IS_OUTBOUND_CALL_CHECK_BC" type="Decision" width="224" x="318" y="343">
+<exit_states>
+<exit_state name="YES" target="Element@1320973598:1655914744221"/>
+<exit_state name="NO" target="Element@1420185000:1655276450543"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1320973598:1655914744221" name="DISCONNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="124" x="644" y="346">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

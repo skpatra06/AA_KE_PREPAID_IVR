@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@2083458124:1644554924721" name="SMS_API_10004" version="6.0.1">
+<subflow_call subflow_name="SMS_GATEWAY" target="Element@31:1644551612648">
+<config>
+<argument_data>
+<data name="SMS_ID">SMS_API_10004</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

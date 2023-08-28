@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@995857589:1651082261937" name="MENU_RETURN" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="MENU_RETURN" default_exit_state="Else">
+        <exit_state name="AA_PRP_XX_MN_0061_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REPEAT_MENU_ELEMENT_NAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0061_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0059_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REPEAT_MENU_ELEMENT_NAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0059_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0044_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REPEAT_MENU_ELEMENT_NAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0044_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0023_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REPEAT_MENU_ELEMENT_NAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0023_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0065_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REPEAT_MENU_ELEMENT_NAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0065_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0038_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REPEAT_MENU_ELEMENT_NAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0038_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0033_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REPEAT_MENU_ELEMENT_NAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0033_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0044A_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REPEAT_MENU_ELEMENT_NAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0044A_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0044B_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REPEAT_MENU_ELEMENT_NAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0044B_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0044V_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="REPEAT_MENU_ELEMENT_NAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0044V_DM" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

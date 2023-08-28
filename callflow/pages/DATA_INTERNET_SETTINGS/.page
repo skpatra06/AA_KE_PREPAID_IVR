@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1321347347:1644304249596" name="DATA_INTERNET_SETTINGS" version="6.0.1">
+<element height="46" id="Element@1264064343:1644304249596" name="DATA_INTERNET_SETTINGS_PE" type="Page Entry" width="208" x="295" y="34">
+<exit_states>
+<exit_state name="next" target="Element@2028014154:1644318809301"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2028014154:1644318809301" name="DATA_BAL_FLAG_CHECK_BC" type="Decision" width="200" x="298" y="108">
+<exit_states>
+<exit_state name="Y" target="Element@2069315533:1644318907752"/>
+<exit_state name="N" target="Element@790074294:1644319486914">
+<bendpoint>
+<dim1 x="190" y="-3"/>
+<dim2 x="-8" y="-253"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2069315533:1644318907752" name="AA_PRP_XX_HA_0035_DB" type="Subflow Call" width="203" x="294" y="182">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644308219913">
+<config>
+<argument_data>
+<data name="HID">Subscriber_Profile_Balance</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1895017118:1644319204269"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1895017118:1644319204269" name="AA_PRP_XX_HA_0035_BC" type="Decision" width="182" x="307" y="261">
+<exit_states>
+<exit_state name="ER" target="Element@790074294:1644319486914">
+<bendpoint>
+<dim1 x="172" y="6"/>
+<dim2 x="-25" y="-98"/>
+</bendpoint>
+</exit_state>
+<exit_state name="SU_AVL" target="Element@650995890:1644319367519"/>
+<exit_state name="SU_NULL" target="Element@790074294:1644319486914"/>
+</exit_states>
+</element>
+<element height="46" id="Element@650995890:1644319367519" name="AA_PRP_XX_PA_0035_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="95" y="369">
+<exit_states>
+<exit_state name="done" target="Element@790074294:1644319486914"/>
+</exit_states>
+</element>
+<element height="46" id="Element@790074294:1644319486914" name="DATA_INTERNET_SETTINGS_CONTD_PE" type="Page Connector" width="253" x="469" y="365">
+<page_connector target="Element@1486669493:1644319501844">DATA_INTERNET_SETTINGS_CONTD_PE<config/>
+</page_connector>
+</element>
+</page>

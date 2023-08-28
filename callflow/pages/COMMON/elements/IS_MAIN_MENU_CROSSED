@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1196736451:1649147471247" name="IS_MAIN_MENU_CROSSED" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="IS_MAIN_MENU_CROSSED" default_exit_state="NO">
+        <exit_state name="NO" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_MAIN_MENU_CROSSED" />
+                </data>
+                <constant_string value="YES" />
+            </string>
+            <string operator="equal">
+                <data>
+                    <session name="S_MENU_ROUTING" />
+                </data>
+                <constant_string value="YES" />
+            </string>
+        </exit_state>
+        <exit_state name="YES" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_MAIN_MENU_CROSSED" />
+                </data>
+                <constant_string value="YES" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

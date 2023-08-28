@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@131632907:1660677646881" name="Subdialog Return_02" version="6.0.1">
+<config>
+<settings>
+<setting name="ReturnValue">CT=D</setting>
+</settings>
+</config>
+</subdialog_return>

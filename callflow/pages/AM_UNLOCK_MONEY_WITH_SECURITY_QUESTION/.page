@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@281541263:1644301342047" name="AM_UNLOCK_MONEY_WITH_SECURITY_QUESTION" version="6.0.1">
+<element height="46" id="Element@1343978968:1644301342047" name="AM_UNLOCK_PE_WITH_SECURITY_QUESTION" type="Page Entry" width="290" x="-16" y="-87">
+<exit_states>
+<exit_state name="next" target="Element@1102396446:1658322656003"/>
+</exit_states>
+</element>
+<element height="46" id="Element@820218280:1644565294634" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="586" y="77">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1220573907:1644565294634" name="AA_PRP_XX_HA_0028B_BC" type="Decision" width="193" x="339" y="66">
+<exit_states>
+<exit_state name="SU" target="Element@1725507939:1657186600147"/>
+<exit_state name="ER" target="Element@820218280:1644565294634"/>
+</exit_states>
+</element>
+<element height="46" id="Element@695105664:1644565294634" name="AA_PRP_XX_HA_0028B_DB" type="Subflow Call" width="193" x="338" y="0">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644565308738">
+<config>
+<argument_data>
+<data name="HID">AM_Profile_KYC_Request</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1220573907:1644565294634"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1575289795:1644565448753" name="GLOBAL_PROMPT_2_PE" type="Page Connector" width="175" x="89" y="402">
+<page_connector target="Element@1574626982:1644299708437">GLOBAL_PROMPT_2_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1596059616:1657177820493" name="AA_PRP_XX_PA_0089_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="140" y="274">
+<exit_states>
+<exit_state name="done" target="Element@1575289795:1644565448753"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1611427359:1657177828161" name="AA_PRP_XX_PA_0090_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="575" y="432">
+<exit_states>
+<exit_state name="done" target="Element@216150608:1657178265416"/>
+</exit_states>
+</element>
+<element height="46" id="Element@646524689:1657178166912" name="Security_Ques_BC" type="Decision" width="152" x="578" y="350">
+<exit_states>
+<exit_state name="SEQ_QUES_AVL" target="Element@1596059616:1657177820493"/>
+<exit_state name="SEQ_QUES_NAVL" target="Element@1611427359:1657177828161"/>
+</exit_states>
+</element>
+<element height="46" id="Element@216150608:1657178265416" name="AGENT TRANSFER_PE" type="Page Connector" width="175" x="575" y="522">
+<page_connector target="Element@1147398060:1644998301421">AGENT TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1725507939:1657186600147" name="BALANACE_CHECK_BC" type="Decision" width="231" x="298" y="161">
+<exit_states>
+<exit_state name="NO" target="Element@1628152316:1657878995466"/>
+<exit_state name="YES" target="Element@1596059616:1657177820493"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1628152316:1657878995466" name="AA_PRP_XX_HA_0028_1DB" type="Subflow Call" width="231" x="483" y="246">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644565308738">
+<config>
+<argument_data>
+<data name="HID">Security_Question</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@646524689:1657178166912"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1102396446:1658322656003" name="UNLOCK_IS_AM_CALLER_1" type="Decision" width="242" x="27" y="3">
+<exit_states>
+<exit_state name="Y" target="Element@1725507939:1657186600147"/>
+<exit_state name="N" target="Element@695105664:1644565294634"/>
+</exit_states>
+</element>
+</page>

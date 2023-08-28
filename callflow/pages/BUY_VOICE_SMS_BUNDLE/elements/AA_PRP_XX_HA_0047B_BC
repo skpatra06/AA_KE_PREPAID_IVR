@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1761845229:1644435193764" name="AA_PRP_XX_HA_0047B_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.buygiftbundles.Bundle_Service_GetBundles</source>
+</config>
+</decision>

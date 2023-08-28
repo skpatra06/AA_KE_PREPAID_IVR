@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@419387410:1644433899724" name="AA_PRP_XX_HA_0045_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.BalanceCompare</source>
+</config>
+</decision>

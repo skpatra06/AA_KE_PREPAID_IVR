@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@888725743:1647428210703" name="Digit_Return" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Digit_Return" default_exit_state="else">
+        <exit_state name="AA_PRP_XX_MN_0015_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0015_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0018_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0018_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0073_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0073_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0026_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0026_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0026B_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0026B_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0028_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0028_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0028B_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0028B_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0072_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0072_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0011_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0011_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0009_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0009_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0057_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0057_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0013_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0013_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0062_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0062_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0021_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0021_DM" />
+            </string>
+        </exit_state>
+        <exit_state name="AA_PRP_XX_MN_0042_DM" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_STR_ELEMENTNAME" />
+                </data>
+                <constant_string value="AA_PRP_XX_MN_0042_DM" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

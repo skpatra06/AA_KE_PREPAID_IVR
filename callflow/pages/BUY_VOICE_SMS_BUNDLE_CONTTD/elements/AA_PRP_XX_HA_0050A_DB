@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@2023452019:1644435929581" name="AA_PRP_XX_HA_0050A_DB" version="6.0.1">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644396918120">
+<config>
+<argument_data>
+<data name="HID"/>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

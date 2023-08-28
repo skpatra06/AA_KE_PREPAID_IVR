@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@572773755:1662991551831" name="AM_UNLOCK_MONEY" version="6.0.1">
+<element height="46" id="Element@1986157011:1662991663583" name="UNLOCK_IS_AM_CALLER" type="Decision" width="242" x="347" y="-83">
+<exit_states>
+<exit_state name="Y" target="Element@640414150:1662991663583">
+<bendpoint>
+<dim1 x="-196" y="4"/>
+<dim2 x="5" y="-334"/>
+</bendpoint>
+</exit_state>
+<exit_state name="N" target="Element@651401401:1662991663583"/>
+</exit_states>
+</element>
+<element height="46" id="Element@640414150:1662991663583" name="AA_PRP_XX_HA_0029_DB" type="Subflow Call" width="182" x="182" y="240">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644565312432">
+<config>
+<argument_data>
+<data name="HID">AM_Profile_ResetPinWIthout_SecretWord</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1358909877:1662991663583"/>
+</exit_states>
+</element>
+<element height="46" id="Element@253062904:1662991663583" name="GLOBAL_PROMPT_2_PE" type="Page Connector" width="175" x="210" y="564">
+<page_connector target="Element@1574626982:1644299708437">GLOBAL_PROMPT_2_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1386516433:1662991663583" name="SMS_API_10009" type="Subflow Call" width="136" x="224" y="490">
+<subflow_call subflow_name="SMS_GATEWAY" target="Element@31:1644314857774">
+<config>
+<argument_data>
+<data name="SMS_ID">SMS_API_10009</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@253062904:1662991663583"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2009537389:1662991663583" name="AA_PRP_XX_HA_0028_BC" type="Decision" width="231" x="359" y="86">
+<exit_states>
+<exit_state name="SU" target="Element@640414150:1662991663583"/>
+<exit_state name="ER" target="Element@1147309926:1662991663583"/>
+</exit_states>
+</element>
+<element height="46" id="Element@722824623:1662991663583" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="-81" y="315">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1147309926:1662991663583" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="680" y="88">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1358909877:1662991663583" name="AA_PRP_XX_HA_0029_BC" type="Decision" width="182" x="182" y="337">
+<exit_states>
+<exit_state name="SU" target="Element@876033720:1662991663583"/>
+<exit_state name="ER" target="Element@722824623:1662991663583"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1307268153:1662991663583" name="AM_UNLOCK_PE" type="Page Entry" width="194" x="371" y="-179">
+<exit_states>
+<exit_state name="next" target="Element@1986157011:1662991663583"/>
+</exit_states>
+</element>
+<element height="46" id="Element@651401401:1662991663583" name="AA_PRP_XX_HA_0028_DB" type="Subflow Call" width="231" x="358" y="20">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644565308738">
+<config>
+<argument_data>
+<data name="HID">AM_Profile_KYC_Request</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2009537389:1662991663583"/>
+</exit_states>
+</element>
+<element height="46" id="Element@876033720:1662991663583" name="AA_PRP_XX_PA_0028_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="200" y="411">
+<exit_states>
+<exit_state name="done" target="Element@1386516433:1662991663583"/>
+</exit_states>
+</element>
+</page>

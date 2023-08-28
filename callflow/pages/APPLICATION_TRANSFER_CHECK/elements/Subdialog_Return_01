@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@749350340:1660677097732" name="Subdialog_Return_01" version="6.0.1">
+<config>
+<settings>
+<setting name="ReturnValue">EV1={Data.Element.APP_TRANSFER.EV1}</setting>
+<setting name="ReturnValue">EV2={Data.Element.APP_TRANSFER.EV2}</setting>
+<setting name="ReturnValue">EV3={Data.Element.APP_TRANSFER.EV3}</setting>
+<setting name="ReturnValue">EV4={Data.Element.APP_TRANSFER.EV4}</setting>
+<setting name="ReturnValue">CT={Data.Element.APP_TRANSFER.CT}</setting>
+</settings>
+</config>
+</subdialog_return>

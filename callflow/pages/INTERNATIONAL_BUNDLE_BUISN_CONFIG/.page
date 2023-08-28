@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@141495242:1644414286093" name="INTERNATIONAL_BUNDLE_BUISN_CONFIG" version="6.0.1">
+<element height="46" id="Element@1083160278:1644414286093" name="INTERNATIONAL_BUNDLE_BUISN_CONFIG_PE" type="Page Entry" width="291" x="279" y="31">
+<exit_states>
+<exit_state name="next" target="Element@384835748:1644414333503"/>
+</exit_states>
+</element>
+<element height="46" id="Element@384835748:1644414333503" name="AA_PRP_XX_HA_0072B_DB" type="Subflow Call" width="189" x="338" y="117">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644414404662">
+<config>
+<argument_data>
+<data name="HID"/>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1552605429:1644414373168"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1552605429:1644414373168" name="AA_PRP_XX_HA_0072B_BC" type="Decision" width="189" x="344" y="214">
+<exit_states>
+<exit_state name="Succes4GCaller" target="Element@719433304:1644414641211"/>
+<exit_state name="Succes3GCaller" target="Element@719433304:1644414641211">
+<bendpoint>
+<dim1 x="-125" y="79"/>
+<dim2 x="-156" y="-59"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Failure" target="Element@457138400:1644414415190"/>
+</exit_states>
+</element>
+<element height="46" id="Element@457138400:1644414415190" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="654" y="207">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@719433304:1644414641211" name="VoiceSMSSettings_Return_PE" type="Page Connector" width="238" x="350" y="352">
+<page_connector target="Element@503285591:1644414739709">VoiceSMSSettings_Return_PE<config/>
+</page_connector>
+</element>
+</page>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@20973202:1655913344344" name="IS_BUNDLE_OUTBOUND_CHECK_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="IS_BUNDLE_PURCHASE_CHECk_BC" default_exit_state="WelMsg">
+        <exit_state name="DataBundle" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PRODUCT_BUNDLE" />
+                </data>
+                <constant_string value="DATA" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

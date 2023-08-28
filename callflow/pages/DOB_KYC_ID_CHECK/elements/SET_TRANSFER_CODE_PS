@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@862080833:1652864258343" name="SET_TRANSFER_CODE_PS" version="6.0.1">
+<config>
+<source type="Class">com.common.SIM_Stolen_Transfercode</source>
+</config>
+</action>

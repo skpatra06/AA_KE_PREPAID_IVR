@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@1966945460:1660677097732" name="CVP Subdialog Return_02" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">{Data.Element.APP_TRANSFER.CT}</setting>
+<setting name="FromExtVXML0">{Data.Element.APP_TRANSFER.EV1}</setting>
+<setting name="FromExtVXML1">{Data.Element.APP_TRANSFER.EV2}</setting>
+<setting name="FromExtVXML2">{Data.Element.APP_TRANSFER.EV3}</setting>
+<setting name="FromExtVXML3">{Data.Element.APP_TRANSFER.EV4}</setting>
+</settings>
+</config>
+</subdialog_return>

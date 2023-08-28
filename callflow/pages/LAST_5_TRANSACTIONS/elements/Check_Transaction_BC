@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@823812301:1644524961797" name="Check_Transaction_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.recharge.Check_Transaction_Available</source>
+</config>
+</decision>

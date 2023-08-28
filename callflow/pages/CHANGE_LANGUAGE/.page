@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1864101029:1644301296410" name="CHANGE_LANGUAGE" version="6.0.1">
+<element height="46" id="Element@259097450:1644301296410" name="CHANGE_LANGUAGE_PE" type="Page Entry" width="182" x="314" y="1">
+<exit_states>
+<exit_state name="next" target="Element@791126091:1644522623122"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1421450460:1644522623122" name="AA_PRP_XX_MN_0003_BC" type="Decision" width="185" x="318" y="377">
+<exit_states>
+<exit_state name="SU" target="Element@186201952:1644522623122"/>
+<exit_state name="ER" target="Element@694483308:1644522623122">
+<bendpoint>
+<dim1 x="332" y="-7"/>
+<dim2 x="-4" y="73"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@532799042:1644522623122" name="AA_PRP_XX_PA_0004_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="254" y="633">
+<exit_states>
+<exit_state name="done" target="Element@1473220487:1644522623122"/>
+</exit_states>
+</element>
+<element height="46" id="Element@791126091:1644522623122" name="IS_HIST_LANG_FLAG_BC" type="Decision" width="199" x="310" y="68">
+<exit_states>
+<exit_state name="Y" target="Element@242076471:1644522623122"/>
+<exit_state name="N" target="Element@824433896:1644522623122">
+<bendpoint>
+<dim1 x="190" y="3"/>
+<dim2 x="181" y="-256"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="194" y="135"/>
+<dim2 x="185" y="-124"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="195" y="188"/>
+<dim2 x="186" y="-71"/>
+</bendpoint>
+</exit_state>
+<exit_state name="SU" target="Element@824433896:1644522623122"/>
+<exit_state name="ER" target="Element@824433896:1644522623122">
+<bendpoint>
+<dim1 x="-165" y="8"/>
+<dim2 x="-169" y="-220"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-122" y="175"/>
+<dim2 x="-126" y="-53"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@13430235:1644522623122" name="AA_PRP_XX_MN_0003_PE" type="Page Entry" width="183" x="80" y="234">
+<exit_states>
+<exit_state name="next" target="Element@824433896:1644522623122"/>
+</exit_states>
+</element>
+<element height="46" id="Element@448519055:1644522623122" name="AA_PRP_XX_HA_0006_BC" type="Decision" width="182" x="337" y="540">
+<exit_states>
+<exit_state name="SU" target="Element@532799042:1644522623122"/>
+<exit_state name="ER" target="Element@1473220487:1644522623122"/>
+</exit_states>
+</element>
+<element height="46" id="Element@242076471:1644522623122" name="AA_PRP_XX_HA_0005_DB" type="Subflow Call" width="182" x="320" y="136">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644522800752">
+<config>
+<argument_data>
+<data name="HID">SP_GET_IVR_SEGMENTATION</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1189726012:1644522623122"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1473220487:1644522623122" name="PREPAID_MAIN_MENU_PE" type="Page Connector" width="192" x="498" y="638">
+<page_connector target="Element@723358145:1644522701421">PREPAID_MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@824433896:1644522623122" name="AA_PRP_XX_MN_0003_DM" src="ServionCombTriesForm" type="Voice Element" width="189" x="319" y="296">
+<exit_states>
+<exit_state name="done" target="Element@1421450460:1644522623122"/>
+<exit_state name="max_nomatch" target="Element@694483308:1644522623122"/>
+<exit_state name="max_noinput" target="Element@694483308:1644522623122">
+<bendpoint>
+<dim1 x="136" y="48"/>
+<dim2 x="-105" y="43"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@694483308:1644522623122">
+<bendpoint>
+<dim1 x="179" y="-51"/>
+<dim2 x="-100" y="-19"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@186201952:1644522623122" name="AA_PRP_XX_HA_0006_DB" type="Subflow Call" width="182" x="331" y="458">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644522792157">
+<config>
+<argument_data>
+<data name="HID">SP_INSERT_UPDATE_LANGUAGE</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@448519055:1644522623122"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1189726012:1644522623122" name="AA_PRP_XX_HA_0005_BC" type="Decision" width="182" x="323" y="210">
+<exit_states>
+<exit_state name="SU" target="Element@824433896:1644522623122"/>
+<exit_state name="ER" target="Element@824433896:1644522623122">
+<bendpoint>
+<dim1 x="42" y="43"/>
+<dim2 x="33" y="-37"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@694483308:1644522623122" name="MaxTries_PE" type="Page Connector" width="140" x="676" y="297">
+<page_connector target="Element@2083153167:1644263127724">MaxTries_PE<config/>
+</page_connector>
+</element>
+</page>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@157112382:1644563515556" name="ME_2_U_PIN_CHANGE" version="6.0.1">
+<element height="46" id="Element@1029196297:1644563515556" name="ME_2_U_PIN_CHANGE_PE" type="Page Entry" width="186" x="321" y="-3">
+<exit_states>
+<exit_state name="next" target="Element@1206809341:1649096068796"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1617342376:1644563593668" name="DOB_KYC_ID_CHECK_PE" type="Page Connector" width="178" x="341" y="149">
+<page_connector target="Element@1189345923:1644549705658">DOB_KYC_ID_CHECK_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@331584791:1644563593668" name="ME_2_U_PIN_CHANGE_RET_PE" type="Page Entry" width="210" x="61" y="184">
+<exit_states>
+<exit_state name="next" target="Element@1268693750:1644563593668"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1492148053:1644563593668" name="AA_PRP_XX_HA_0023_BC" type="Decision" width="182" x="345" y="297">
+<exit_states>
+<exit_state name="SU" target="Element@1631593566:1644563593668"/>
+<exit_state name="ER" target="Element@442335022:1644563593668"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1631593566:1644563593668" name="AA_PRP_XX_PA_0021_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="351" y="379">
+<exit_states>
+<exit_state name="done" target="Element@1349278673:1644564083839"/>
+</exit_states>
+</element>
+<element height="46" id="Element@442335022:1644563593668" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="576" y="325">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1268693750:1644563593668" name="AA_PRP_XX_HA_0023_DB" type="Subflow Call" width="182" x="346" y="225">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644564134797">
+<config>
+<argument_data>
+<data name="HID">Subscriber_Transaction_Reset_ME2U_Password</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1492148053:1644563593668"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1329476789:1644564083839" name="GLOBAL_PROMPT_2_PE" type="Page Connector" width="175" x="354" y="560">
+<page_connector target="Element@1574626982:1644299708437">GLOBAL_PROMPT_2_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1349278673:1644564083839" name="SMS_API_10007" type="Subflow Call" width="135" x="371" y="466">
+<subflow_call subflow_name="SMS_GATEWAY" target="Element@31:1644551612648">
+<config>
+<argument_data>
+<data name="SMS_ID">SMS_API_10007</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1329476789:1644564083839"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1206809341:1649096068796" name="PREVIOUS_PAGE1" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="178" x="325" y="64">
+<exit_states>
+<exit_state name="done" target="Element@1617342376:1644563593668"/>
+</exit_states>
+</element>
+</page>

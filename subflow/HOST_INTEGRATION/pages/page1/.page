@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@435977246:1644262199844" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1644262199844" name="HOST_INTEGRATION" type="Subflow Start" width="158" x="280" y="81">
+<exit_states>
+<exit_state name="next" target="Element@866741485:1648390357064"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1103680516:1644262211013" name="HOST_INTEGRATION_BC" type="Decision" width="178" x="289" y="258">
+<exit_states>
+<exit_state name="SU" target="Element@2098260219:1644262211013">
+<bendpoint>
+<dim1 x="-38" y="54"/>
+<dim2 x="-39" y="-56"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@2098260219:1644262211013">
+<bendpoint>
+<dim1 x="33" y="54"/>
+<dim2 x="32" y="-56"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2098260219:1644262211013" name="Subflow Return_01" type="Subflow Return" width="148" x="321" y="383"/>
+<element height="46" id="Element@866741485:1648390357064" name="FetchAudio_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="130" x="302" y="171">
+<exit_states>
+<exit_state name="done" target="Element@1103680516:1644262211013"/>
+</exit_states>
+</element>
+</page>

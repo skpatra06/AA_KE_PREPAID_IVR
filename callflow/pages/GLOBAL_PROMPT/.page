@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@256128641:1644297755601" name="GLOBAL_PROMPT" version="6.0.1">
+<element height="46" id="Element@769700759:1644297755601" name="GLOBAL_PROMPT_1_PE" type="Page Entry" width="175" x="159" y="-56">
+<exit_states>
+<exit_state name="next" target="Element@1761447380:1655915122415"/>
+</exit_states>
+</element>
+<element height="46" id="Element@44135418:1644299589437" name="AA_PRP_XX_MN_0075_BC" type="Decision" width="198" x="145" y="228">
+<exit_states>
+<exit_state name="STAR" target="Element@929705769:1644844412911"/>
+<exit_state name="HASH" target="Element@1478047181:1644932419683"/>
+<exit_state name="9" target="Element@1620029891:1644299589437"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1620029891:1644299589437" name="AGENT TRANSFER_PE" type="Page Connector" width="183" x="345" y="357">
+<page_connector target="Element@1147398060:1644998301421">AGENT TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1430954026:1644299589437" name="AA_PRP_XX_MN_0075_DM" src="ServionCombTriesForm" type="Voice Element" width="202" x="139" y="145">
+<exit_states>
+<exit_state name="done" target="Element@44135418:1644299589437"/>
+<exit_state name="max_nomatch" target="Element@157500889:1649147350242"/>
+<exit_state name="max_noinput" target="Element@157500889:1649147350242"/>
+<exit_state name="max_combinedtries" target="Element@157500889:1649147350242"/>
+</exit_states>
+</element>
+<element height="46" id="Element@733308063:1644299692165" name="AA_PRP_XX_MN_0076_BC" type="Decision" width="185" x="790" y="215">
+<exit_states>
+<exit_state name="STAR" target="Element@1360720773:1644843379309"/>
+<exit_state name="HASH" target="Element@1902751239:1644932390361"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1574626982:1644299708437" name="GLOBAL_PROMPT_2_PE" type="Page Entry" width="175" x="778" y="-55">
+<exit_states>
+<exit_state name="next" target="Element@1511143:1655914975620"/>
+</exit_states>
+</element>
+<element height="46" id="Element@535452477:1644843205086" name="AA_PRP_XX_MN_0076_PE" type="Page Entry" width="183" x="1056" y="135">
+<exit_states>
+<exit_state name="next" target="Element@2029726297:1648297678325"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1360720773:1644843379309" name="PREPAID_MAIN_MENU_PE" type="Page Connector" width="188" x="676" y="353">
+<page_connector target="Element@723358145:1644522701421">PREPAID_MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@556210449:1644844327772" name="AA_PRP_XX_MN_0075_PE" type="Page Entry" width="183" x="-126" y="151">
+<exit_states>
+<exit_state name="next" target="Element@1430954026:1644299589437"/>
+</exit_states>
+</element>
+<element height="46" id="Element@929705769:1644844412911" name="PREPAID_MAIN_MENU_PE" type="Page Connector" width="188" x="-75" y="357">
+<page_connector target="Element@723358145:1644522701421">PREPAID_MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1902751239:1644932390361" name="MENU_RETURN_PE" type="Page Connector" width="150" x="942" y="348">
+<page_connector target="Element@1013867995:1644911551951">MENU_RETURN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1478047181:1644932419683" name="MENU_RETURN_PE" type="Page Connector" width="188" x="139" y="359">
+<page_connector target="Element@1013867995:1644911551951">MENU_RETURN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2029726297:1648297678325" name="AA_PRP_XX_MN_0076_DM" src="ServionCombTriesForm" type="Voice Element" width="189" x="789" y="134">
+<exit_states>
+<exit_state name="done" target="Element@733308063:1644299692165"/>
+<exit_state name="max_nomatch" target="Element@157500889:1649147350242"/>
+<exit_state name="max_noinput" target="Element@157500889:1649147350242"/>
+<exit_state name="max_combinedtries" target="Element@157500889:1649147350242"/>
+</exit_states>
+</element>
+<element height="46" id="Element@157500889:1649147350242" name="S_MENU_ROUTING" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="178" x="470" y="148">
+<exit_states>
+<exit_state name="done" target="Element@1232868757:1649147350243"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1232868757:1649147350243" name="MaxTries_PE" type="Page Connector" width="141" x="492" y="245">
+<page_connector target="Element@2083153167:1644263127724">MaxTries_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1511143:1655914975620" name="IS_OUTBOUND_CALL_CHK2_BC" type="Decision" width="216" x="766" y="38">
+<exit_states>
+<exit_state name="YES" target="Element@948354603:1655915114762"/>
+<exit_state name="NO" target="Element@2029726297:1648297678325"/>
+</exit_states>
+</element>
+<element height="46" id="Element@948354603:1655915114762" name="CALL_DISCONNNECT" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="171" x="479" y="37">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1761447380:1655915122415" name="IS_OUTBOUND_CALL_CHK1_BC" type="Decision" width="259" x="112" y="44">
+<exit_states>
+<exit_state name="YES" target="Element@948354603:1655915114762"/>
+<exit_state name="NO" target="Element@1430954026:1644299589437"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@484795344:1644564677793" name="BUISNESS_HOURS_CHECK" version="6.0.1">
+<element height="46" id="Element@938126608:1644564677793" name="BUISNESS_HOURS_CHECK_PE" type="Page Entry" width="206" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@1956662442:1644572889482"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1956662442:1644572889482" name="CheckIfConfiguredEmergencyHoliday_BC" type="Decision" width="270" x="277" y="105">
+<exit_states>
+<exit_state name="YES" target="Element@289285325:1644572984329"/>
+<exit_state name="NO" target="Element@573242181:1644573013737"/>
+</exit_states>
+</element>
+<element height="46" id="Element@289285325:1644572984329" name="AA_PRP_XX_PA_0070_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="187" x="559" y="243">
+<exit_states>
+<exit_state name="done" target="Element@2050297937:1644573089844"/>
+</exit_states>
+</element>
+<element height="46" id="Element@573242181:1644573013737" name="CheckIfWithinBuisnessHours_BC" type="Decision" width="222" x="138" y="200">
+<exit_states>
+<exit_state name="YES" target="Element@79713937:1644573328955"/>
+<exit_state name="NO" target="Element@2068834567:1644573128650"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2050297937:1644573089844" name="THANKYOU_PE" type="Page Connector" width="184" x="561" y="348">
+<page_connector target="Element@475751667:1644263127724">THANKYOU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1850456564:1644573128650" name="THANKYOU_PE" type="Page Connector" width="184" x="67" y="376">
+<page_connector target="Element@475751667:1644263127724">THANKYOU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2068834567:1644573128650" name="AA_PRP_XX_PA_0069_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="227" x="47" y="279">
+<exit_states>
+<exit_state name="done" target="Element@1850456564:1644573128650"/>
+</exit_states>
+</element>
+<element height="46" id="Element@79713937:1644573328955" name="AGENT TRANSFER_RET_PE" type="Page Connector" width="206" x="302" y="355">
+<page_connector target="Element@1990285608:1651751286561">AGENT TRANSFER_RET_PE<config/>
+</page_connector>
+</element>
+</page>

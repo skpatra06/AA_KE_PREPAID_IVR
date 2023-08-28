@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1233407477:1649059739229" name="DOB_VALIDATION_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.digitcondition.DOBValidation</source>
+</config>
+</decision>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@988278529:1654600155542" name="AA_PRP_XX_HA_0038_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.buygiftbundles.Airtime_Balance_Check</source>
+</config>
+</decision>

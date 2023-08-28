@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@213484358:1644551326169" name="AA_PRP_XX_HA_0016_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.recharge.Subscriber_Transaction_Voucher_Recharge</source>
+</config>
+</decision>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2118161363:1645429086025" name="PYMNT_MODE_CHECK_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.buygiftbundles.UserPaymentOptionCheck</source>
+</config>
+</decision>

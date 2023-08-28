@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1645481513:1657893094796" name="AA_PRP1_XX_HA_0067_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.amservices.AM_PIN_Validation_check</source>
+</config>
+</decision>

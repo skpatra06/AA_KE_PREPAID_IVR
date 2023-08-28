@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@970409282:1649097749921" name="RECHARGE_AMOUNT_VALIDATION_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.digitcondition.AmountValidation</source>
+</config>
+</decision>

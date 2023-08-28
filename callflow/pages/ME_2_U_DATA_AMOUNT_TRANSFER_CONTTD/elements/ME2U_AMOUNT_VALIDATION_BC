@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1941124715:1649094251552" name="ME2U_AMOUNT_VALIDATION_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.me2u.ME2UAmountValidation</source>
+</config>
+</decision>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1292002818:1644435281846" name="VOICE_SMS_BUNDLE_BUISNESS_CONFIG" version="6.0.1">
+<element height="46" id="Element@658030101:1644435281846" name="VOICE_SMS_BUNDLE_BUISNESS_CONFIG_PE" type="Page Entry" width="282" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@889834938:1644435366783"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1697987206:1644435366783" name="AA_PRP_XX_HA_0072A_BC" type="Decision" width="231" x="329" y="204">
+<exit_states>
+<exit_state name="Success4G" target="Element@564117803:1644435366783"/>
+<exit_state name="Success3G" target="Element@564117803:1644435366783">
+<bendpoint>
+<dim1 x="-93" y="97"/>
+<dim2 x="-171" y="-84"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Failure" target="Element@2044787682:1644435366783"/>
+</exit_states>
+</element>
+<element height="46" id="Element@889834938:1644435366783" name="AA_PRP_XX_HA_0072A_DB" type="Subflow Call" width="231" x="333" y="123">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644346350206">
+<config>
+<argument_data>
+<data name="HID"/>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1697987206:1644435366783"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2044787682:1644435366783" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="553" y="293">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@564117803:1644435366783" name="AA_PRP_XX_MN_0053_PE" type="Page Connector" width="243" x="401" y="385">
+<page_connector target="Element@1997188479:1644907318157">AA_PRP_XX_MN_0053_PE<config/>
+</page_connector>
+</element>
+</page>

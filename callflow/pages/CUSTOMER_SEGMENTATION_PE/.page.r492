@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1851947562:1644291541022" name="CUSTOMER_SEGMENTATION_PE" version="6.0.1">
+<element height="46" id="Element@1640677372:1644291541022" name="CUSTOMER_SEGMENTATION_PE" type="Page Entry" width="218" x="310" y="31">
+<exit_states>
+<exit_state name="next" target="Element@1208960278:1644523400474"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2101216148:1644523400474" name="AA_PRP_XX_HA_0009_BC" type="Decision" width="184" x="360" y="594">
+<exit_states>
+<exit_state name="SU" target="Element@564956465:1644523400474"/>
+<exit_state name="ER" target="Element@564956465:1644523400474">
+<bendpoint>
+<dim1 x="54" y="50"/>
+<dim2 x="31" y="-37"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1208960278:1644523400474" name="TeaserFlag_BC" type="Decision" width="130" x="364" y="99">
+<exit_states>
+<exit_state name="N" target="Element@2107892423:1644523400474">
+<bendpoint>
+<dim1 x="-185" y="1"/>
+<dim2 x="-178" y="-633"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-180" y="631"/>
+<dim2 x="-173" y="-3"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Y" target="Element@452080850:1644523400474"/>
+</exit_states>
+</element>
+<element height="46" id="Element@452080850:1644523400474" name="AA_PRP_XX_HA_0007_DB" type="Subflow Call" width="182" x="368" y="179">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644525232196">
+<config>
+<argument_data>
+<data name="HID">AA_PRP_XX_HA_0007</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+<data name="S_RESPONSE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1132021613:1644523400474"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1196005004:1644523400474" name="AA_PRP_XX_HA_0009_DB" type="Subflow Call" width="182" x="351" y="505">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644525240355">
+<config>
+<argument_data>
+<data name="HID">AA_PRP_XX_HA_0009</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+<data name="S_RESPONSE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2101216148:1644523400474"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1132021613:1644523400474" name="AA_PRP_XX_HA_0007_BC" type="Decision" width="182" x="361" y="263">
+<exit_states>
+<exit_state name="SU" target="Element@1314315829:1644523400474"/>
+<exit_state name="ER" target="Element@1314315829:1644523400474">
+<bendpoint>
+<dim1 x="37" y="44"/>
+<dim2 x="32" y="-37"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@564956465:1644523400474" name="Data_available_BC" type="Decision" width="166" x="355" y="655">
+<exit_states>
+<exit_state name="y" target="Element@2107892423:1644523400474"/>
+<exit_state name="n" target="Element@1800899793:1644523400474"/>
+</exit_states>
+</element>
+<element height="46" id="Element@686290287:1644523400474" name="AA_PRP_XX_HA_0008_BC" type="Decision" width="191" x="336" y="429">
+<exit_states>
+<exit_state name="SU" target="Element@1196005004:1644523400474"/>
+<exit_state name="ER" target="Element@1196005004:1644523400474">
+<bendpoint>
+<dim1 x="42" y="47"/>
+<dim2 x="45" y="-39"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2107892423:1644523400474" name="Copy_of_Action_01" type="Action" width="151" x="347" y="733">
+<exit_states>
+<exit_state name="done" target="Element@1800899793:1644523400474">
+<bendpoint>
+<dim1 x="246" y="-7"/>
+<dim2 x="-1" y="72"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1314315829:1644523400474" name="AA_PRP_XX_HA_0008_DB" type="Subflow Call" width="182" x="370" y="337">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644525235530">
+<config>
+<argument_data>
+<data name="HID">AA_PRP_XX_HA_0008</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+<data name="S_RESPONSE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@686290287:1644523400474"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1800899793:1644523400474" name="REPEAT_CALLER_CHECK_PE" type="Page Connector" width="196" x="585" y="665">
+<page_connector target="Element@310696972:1644523456313">REPEAT_CALLER_CHECK_PE<config/>
+</page_connector>
+</element>
+</page>

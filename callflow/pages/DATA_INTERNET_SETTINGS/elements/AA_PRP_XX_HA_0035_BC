@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1895017118:1644319204269" name="AA_PRP_XX_HA_0035_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.datainternetsetttings.Balance_Check_DataInternet_Settings</source>
+</config>
+</decision>

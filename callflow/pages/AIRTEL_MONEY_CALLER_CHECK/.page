@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@130420535:1644549212766" name="AIRTEL_MONEY_CALLER_CHECK" version="6.0.1">
+<element height="46" id="Element@12210895:1644549212766" name="AIRTEL_MONEY_CALLER_CHECK_PE" type="Page Entry" width="239" x="325" y="26">
+<exit_states>
+<exit_state name="next" target="Element@389601175:1644549517003"/>
+</exit_states>
+</element>
+<element height="46" id="Element@389601175:1644549517003" name="AA_PRP_XX_HA_0065_DB" type="Subflow Call" width="195" x="345" y="103">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644554853773">
+<config>
+<argument_data>
+<data name="HID">AM_Profile_KYC_Request_HA_0065</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@578785617:1645706565462"/>
+</exit_states>
+</element>
+<element height="46" id="Element@492166970:1645425214591" name="AMS_RET_PE" type="Page Connector" width="204" x="532" y="373">
+<page_connector target="Element@575124329:1646503295237">AMS_RET_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@578785617:1645706565462" name="AA_PRP_XX_HA_0065_BC" type="Decision" width="182" x="351" y="177">
+<exit_states>
+<exit_state name="Yes" target="Element@1755890263:1645706935028"/>
+<exit_state name="ER" target="Element@1755890263:1645706935028">
+<bendpoint>
+<dim1 x="-90" y="44"/>
+<dim2 x="-91" y="-45"/>
+</bendpoint>
+</exit_state>
+<exit_state name="No" target="Element@1755890263:1645706935028">
+<bendpoint>
+<dim1 x="62" y="48"/>
+<dim2 x="61" y="-41"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1755890263:1645706935028" name="AMCC_PAGE_RETURN_CHECK" type="Decision" width="209" x="339" y="266">
+<exit_states>
+<exit_state name="AirtelMoneyServices" target="Element@492166970:1645425214591"/>
+<exit_state name="DataBundle" target="Element@2094284972:1646503374754"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2094284972:1646503374754" name="BUY_BUNDLE_PURCHASE_RET_PE" type="Page Connector" width="253" x="192" y="381">
+<page_connector target="Element@1044825198:1654603068254">BUY_BUNDLE_PURCHASE_RET_PE<config/>
+</page_connector>
+</element>
+</page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1182385995:1644336308649" name="SMS_API_10014_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.SMSAPICheck</source>
+</config>
+</decision>

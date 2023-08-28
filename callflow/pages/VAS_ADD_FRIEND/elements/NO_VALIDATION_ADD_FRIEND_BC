@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1168135898:1649101368742" name="NO_VALIDATION_ADD_FRIEND_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.digitcondition.NumberValidation</source>
+</config>
+</decision>

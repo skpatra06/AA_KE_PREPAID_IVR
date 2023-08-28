@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1831754026:1644572550972" name="API_DBFailure_ErrorCode_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.GetErrorMsg</source>
+</config>
+</decision>

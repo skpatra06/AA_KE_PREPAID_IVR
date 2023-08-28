@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1562022039:1644437740932" name="VAS_SUBSCRIBE" version="6.0.1">
+<element height="46" id="Element@1122843008:1644437740932" name="VAS_SUBSCRIBE_PE" type="Page Entry" width="151" x="364" y="34">
+<exit_states>
+<exit_state name="next" target="Element@1803518899:1644473012204"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1803518899:1644473012204" name="AA_PRP_XX_HA_0054_DB" type="Subflow Call" width="182" x="348" y="110">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644473017103">
+<config>
+<argument_data>
+<data name="HID">Vas_Serivce_AvailableVas</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1042766351:1644473102459"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1042766351:1644473102459" name="AA_PRP_XX_HA_0054_BC" type="Decision" width="182" x="351" y="186">
+<exit_states>
+<exit_state name="Success" target="Element@778996412:1644473482832"/>
+<exit_state name="Failure" target="Element@2091828584:1644473138649"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2091828584:1644473138649" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="595" y="186">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@778996412:1644473482832" name="D_AA_PRP_XX_MN_0059_DM" src="ServionCombTriesForm" type="Voice Element" width="202" x="362" y="267">
+<exit_states>
+<exit_state name="done" target="Element@1616723496:1644473627885"/>
+<exit_state name="max_nomatch" target="Element@1507309941:1644473574109"/>
+<exit_state name="max_noinput" target="Element@1507309941:1644473574109">
+<bendpoint>
+<dim1 x="162" y="44"/>
+<dim2 x="-138" y="20"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@1507309941:1644473574109">
+<bendpoint>
+<dim1 x="278" y="28"/>
+<dim2 x="-111" y="-66"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1507309941:1644473574109" name="MaxTries_PE" type="Page Connector" width="140" x="687" y="291">
+<page_connector target="Element@2083153167:1644263127724">MaxTries_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1616723496:1644473627885" name="D_AA_PRP_XX_MN_0059_BC" type="Decision" width="198" x="376" y="383">
+<exit_states>
+<exit_state name="1" target="Element@48918277:1645811593773"/>
+<exit_state name="2" target="Element@48918277:1645811593773">
+<bendpoint>
+<dim1 x="43" y="43"/>
+<dim2 x="36" y="-45"/>
+</bendpoint>
+</exit_state>
+<exit_state name="3" target="Element@48918277:1645811593773">
+<bendpoint>
+<dim1 x="137" y="40"/>
+<dim2 x="130" y="-48"/>
+</bendpoint>
+</exit_state>
+<exit_state name="4" target="Element@48918277:1645811593773">
+<bendpoint>
+<dim1 x="-103" y="43"/>
+<dim2 x="-110" y="-45"/>
+</bendpoint>
+</exit_state>
+<exit_state name="5" target="Element@778996412:1644473482832">
+<bendpoint>
+<dim1 x="-150" y="-61"/>
+<dim2 x="-60" y="66"/>
+</bendpoint>
+</exit_state>
+<exit_state name="6" target="Element@1874084572:1646518490932"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1038858244:1644474208502" name="AA_PRP_XX_HA_0056_BC" type="Decision" width="182" x="395" y="557">
+<exit_states>
+<exit_state name="Success" target="Element@452204417:1644474282612"/>
+<exit_state name="Failure" target="Element@254920467:1644474241403"/>
+</exit_states>
+</element>
+<element height="46" id="Element@254920467:1644474241403" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="691" y="573">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@452204417:1644474282612" name="AA_PRP_XX_PA_0050_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="227" x="384" y="649">
+<exit_states>
+<exit_state name="done" target="Element@1414627788:1644474336882"/>
+</exit_states>
+</element>
+<element height="46" id="Element@816067748:1644474336882" name="GLOBAL_PROMPT_2_PE" type="Page Connector" width="175" x="411" y="823">
+<page_connector target="Element@1574626982:1644299708437">GLOBAL_PROMPT_2_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1414627788:1644474336882" name="SMS_API_10021" type="Subflow Call" width="156" x="411" y="735">
+<subflow_call subflow_name="SMS_GATEWAY" target="Element@31:1644314857774">
+<config>
+<argument_data>
+<data name="SMS_ID">SMS_API_10021</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@816067748:1644474336882"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1211333787:1644898571181" name="D_AA_PRP_XX_MN_0059_PE" type="Page Entry" width="196" x="95" y="229">
+<exit_states>
+<exit_state name="next" target="Element@778996412:1644473482832"/>
+</exit_states>
+</element>
+<element height="46" id="Element@48918277:1645811593773" name="AA_PRP_XX_HA_0056_DB" type="Subflow Call" width="182" x="384" y="471">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644474204076">
+<config>
+<argument_data>
+<data name="HID">Vas_Service_Subscription</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1038858244:1644474208502"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1874084572:1646518490932" name="REPEAT_TRIES_PE" type="Page Connector" width="213" x="86" y="392">
+<page_connector target="Element@742456021:1648060963212">REPEAT_TRIES_PE<config/>
+</page_connector>
+</element>
+</page>

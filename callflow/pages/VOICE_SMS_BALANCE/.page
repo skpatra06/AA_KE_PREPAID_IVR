@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2060707595:1644410518430" name="VOICE_SMS_BALANCE" version="6.0.1">
+<element height="46" id="Element@717777197:1644410518430" name="VOICE_SMS_BALANCE_PE" type="Page Entry" width="186" x="341" y="32">
+<exit_states>
+<exit_state name="next" target="Element@1944789390:1644410574440"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1944789390:1644410574440" name="VoiceOrSMSBalanceFlagBC" type="Decision" width="192" x="336" y="105">
+<exit_states>
+<exit_state name="Yes" target="Element@1632934716:1644410740110"/>
+<exit_state name="No" target="Element@2017580582:1654600928774"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1632934716:1644410740110" name="AA_PRP_XX_HA_0043_DB" type="Subflow Call" width="182" x="219" y="184">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644410743417">
+<config>
+<argument_data>
+<data name="HID">Subscriber_Profile_Balance</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1089849944:1644410811471"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1089849944:1644410811471" name="AA_PRP_XX_HA_0043_BC" type="Decision" width="182" x="202" y="262">
+<exit_states>
+<exit_state name="SU_AVL" target="Element@1172775692:1644411031242"/>
+<exit_state name="SU_NULL" target="Element@2017580582:1654600928774"/>
+<exit_state name="ER" target="Element@2017580582:1654600928774">
+<bendpoint>
+<dim1 x="269" y="-51"/>
+<dim2 x="-158" y="-21"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1172775692:1644411031242" name="AA_PRP_XX_PA_0042_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="228" y="383">
+<exit_states>
+<exit_state name="done" target="Element@2017580582:1654600928774"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2086865518:1646517076448" name="BUY_GIFT_DATA_BUNDLE_PE" type="Page Connector" width="235" x="692" y="364">
+<page_connector target="Element@1196313888:1652463465730">BUY_GIFT_DATA_BUNDLE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2017580582:1654600928774" name="PURCHASE_TYPE_CHECK_BC" type="Decision" width="203" x="631" y="263">
+<exit_states>
+<exit_state name="GIFT" target="Element@832822307:1654601744206"/>
+<exit_state name="BUY" target="Element@2086865518:1646517076448"/>
+</exit_states>
+</element>
+<element height="46" id="Element@832822307:1654601744206" name="AA_PRP_XX_MN_0042_PE" type="Page Connector" width="245" x="708" y="177">
+<page_connector target="Element@1325723446:1644906895732">AA_PRP_XX_MN_0042_PE<config/>
+</page_connector>
+</element>
+</page>

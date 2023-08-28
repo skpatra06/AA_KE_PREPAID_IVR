@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@320717867:1655105172068" name="SET_AUTH_TOKEN1" version="6.0.1">
+<config>
+<source type="Class">com.common.Get_KYC_AuthTokenGen</source>
+</config>
+</action>

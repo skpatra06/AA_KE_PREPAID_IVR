@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@871620475:1644845570269" name="AA_PRP_XX_HA_0068_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.me2u.PUK_SIM_ME2_DOB_Validation</source>
+</config>
+</decision>

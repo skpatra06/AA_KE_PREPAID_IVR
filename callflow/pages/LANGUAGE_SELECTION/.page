@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1749977488:1644263484527" name="LANGUAGE_SELECTION" version="6.0.1">
+<element height="46" id="Element@625965093:1644263484527" name="LANGUAGE_SELECTION_PE" type="Page Entry" width="193" x="356" y="2">
+<exit_states>
+<exit_state name="next" target="Element@2120953161:1661666750626"/>
+</exit_states>
+</element>
+<element height="46" id="Element@768803820:1644291059000" name="AA_PRP_XX_MN_0002_BC" type="Decision" width="185" x="368" y="256">
+<exit_states>
+<exit_state name="ER" target="Element@955288727:1644291058999">
+<bendpoint>
+<dim1 x="382" y="-3"/>
+<dim2 x="-108" y="74"/>
+</bendpoint>
+</exit_state>
+<exit_state name="SU" target="Element@259986851:1644291059000"/>
+</exit_states>
+</element>
+<element height="46" id="Element@955288727:1644291058999" name="CUSTOMER_SEGMENTATION_PE" type="Page Connector" width="218" x="841" y="179">
+<page_connector target="Element@1113490726:1645554481729">CUSTOMER_SEGMENTATION_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@915826608:1644291059000" name="AA_PRP_XX_MN_0002_DM" src="ServionCombTriesForm" type="Voice Element" width="189" x="363" y="181">
+<exit_states>
+<exit_state name="done" target="Element@768803820:1644291059000"/>
+<exit_state name="max_nomatch" target="Element@955288727:1644291058999"/>
+<exit_state name="max_noinput" target="Element@955288727:1644291058999">
+<bendpoint>
+<dim1 x="284" y="-20"/>
+<dim2 x="-209" y="-18"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@955288727:1644291058999">
+<bendpoint>
+<dim1 x="272" y="28"/>
+<dim2 x="-221" y="30"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@259986851:1644291059000" name="AA_PRP_XX_HA_0004_DB" type="Subflow Call" width="182" x="377" y="337">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644291101761">
+<config>
+<argument_data>
+<data name="HID">SP_INSERT_UPDATE_LANGUAGE</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@955288727:1644291058999">
+<bendpoint>
+<dim1 x="487" y="-3"/>
+<dim2 x="5" y="144"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2144624637:1644840699032" name="AA_PRP_XX_MN_0002_PE" type="Page Entry" width="183" x="108" y="158">
+<exit_states>
+<exit_state name="next" target="Element@915826608:1644291059000"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2120953161:1661666750626" name="IS_PRE_LANG_FLAG" type="Decision" width="153" x="375" y="93">
+<exit_states>
+<exit_state name="Y" target="Element@955288727:1644291058999"/>
+<exit_state name="N" target="Element@915826608:1644291059000"/>
+</exit_states>
+</element>
+</page>

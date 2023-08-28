@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@197242395:1645560118556" name="DOB_KYC_CHECK_ROUTING" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="DOB_KYC_CHECK_ROUTING">
+        <exit_state name="PUK" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PREVIOUS_PAGE" />
+                </data>
+                <constant_string value="PUK_MENU" />
+            </string>
+        </exit_state>
+        <exit_state name="ME2U_PIN_CHANGE" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PREVIOUS_PAGE" />
+                </data>
+                <constant_string value="ME2U_PIN_CHANGE" />
+            </string>
+        </exit_state>
+        <exit_state name="SIM_STOLEN" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PREVIOUS_PAGE" />
+                </data>
+                <constant_string value="SIM_STOLEN" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

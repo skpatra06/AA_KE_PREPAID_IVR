@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2001830484:1644306208518" name="page1" version="6.0.1">
+<element height="46" id="Element@31:1644306208518" name="SMS_GATEWAY" type="Subflow Start" width="130" x="262" y="-23">
+<exit_states>
+<exit_state name="next" target="Element@86465655:1645430956493"/>
+</exit_states>
+</element>
+<element height="46" id="Element@682698683:1644306215246" name="Subflow Return_01" type="Subflow Return" width="148" x="226" y="292"/>
+<element height="46" id="Element@86465655:1645430956493" name="SMS_API_FLAG_CHECK_BC" type="Decision" width="192" x="232" y="75">
+<exit_states>
+<exit_state name="Y" target="Element@1170140172:1645431028218"/>
+<exit_state name="N" target="Element@682698683:1644306215246">
+<bendpoint>
+<dim1 x="210" y="-3"/>
+<dim2 x="238" y="-220"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="209" y="245"/>
+<dim2 x="221" y="-5"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1170140172:1645431028218" name="AA_PRP_XX_HA_0069_DB" type="Subflow Call" width="182" x="223" y="177">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644564160821">
+<config>
+<argument_data>
+<data name="HID">Send_SMS_Notification</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@682698683:1644306215246"/>
+</exit_states>
+</element>
+</page>

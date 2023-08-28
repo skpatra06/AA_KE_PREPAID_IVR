@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@836506575:1644523818398" name="CONTEXTUAL_TEASER_CHECK" version="6.0.1">
+<element height="46" id="Element@566586737:1644523818398" name="CONTEXTUAL_TEASER_CHECK_PE" type="Page Entry" width="228" x="292" y="-19">
+<exit_states>
+<exit_state name="next" target="Element@1126756725:1646036110912"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1126756725:1646036110912" name="Teaser_Flag_Check_BC" type="Decision" width="167" x="328" y="73">
+<exit_states>
+<exit_state name="Y" target="Element@110506708:1648576494885"/>
+<exit_state name="N" target="Element@1302425711:1646044943082"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1302425711:1646044943082" name="CUST_SEG_RET_PE" type="Page Connector" width="182" x="799" y="288">
+<page_connector target="Element@2120798304:1646763844885">CUST_SEG_RET_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@110506708:1648576494885" name="IS_CONTEXTUAL_TEASER_VALID_BC" type="Decision" width="237" x="301" y="163">
+<exit_states>
+<exit_state name="Yes" target="Element@1742567595:1648576761518"/>
+<exit_state name="No" target="Element@1302425711:1646044943082"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1742567595:1648576761518" name="CT_COMMON_AUDIO_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="186" x="332" y="252">
+<exit_states>
+<exit_state name="done" target="Element@1796582862:1662008068017"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1648957410:1648576817643" name="CT_COMMON_MENU_DM" src="ServionCombTriesForm" type="Voice Element" width="209" x="322" y="407">
+<exit_states>
+<exit_state name="done" target="Element@1843579780:1649331874974">
+<bendpoint>
+<dim1 x="13" y="74"/>
+<dim2 x="-6" y="-67"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@1302425711:1646044943082"/>
+<exit_state name="max_noinput" target="Element@1302425711:1646044943082"/>
+<exit_state name="max_combinedtries" target="Element@1302425711:1646044943082"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1209559624:1648576817643" name="CT_MENU_ROUTER_BC" type="Decision" width="171" x="338" y="591">
+<exit_states>
+<exit_state name="Data_Bundle" target="Element@906822311:1648577330409"/>
+<exit_state name="Voice_Bundle" target="Element@906822311:1648577330409">
+<bendpoint>
+<dim1 x="-209" y="38"/>
+<dim2 x="138" y="41"/>
+</bendpoint>
+</exit_state>
+<exit_state name="GSM_Bal" target="Element@849897145:1648577292168"/>
+<exit_state name="AM_Unlock" target="Element@621752207:1648577341450"/>
+<exit_state name="ManiMenu" target="Element@1302425711:1646044943082"/>
+<exit_state name="Open_Ticket" target="Element@1606544455:1661965140597"/>
+</exit_states>
+</element>
+<element height="46" id="Element@849897145:1648577292168" name="AIRTEL_CREDIT_SERVICES_PE" type="Page Connector" width="206" x="330" y="739">
+<page_connector target="Element@743169820:1644437971432">AIRTEL_CREDIT_SERVICES_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@906822311:1648577330409" name="BUY_GIFT_DATA_BUNDLE_PE" type="Page Connector" width="206" x="-75" y="603">
+<page_connector target="Element@1196313888:1652463465730">BUY_GIFT_DATA_BUNDLE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@621752207:1648577341450" name="AM_UNLOCK_PE_WITH_SECURITY_QUESTION" type="Page Connector" width="290" x="687" y="590">
+<page_connector target="Element@1343978968:1644301342047">AM_UNLOCK_PE_WITH_SECURITY_QUESTION<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1843579780:1649331874974" name="CT_COMMON_MENU_EXIT_BC" type="Decision" width="212" x="316" y="490">
+<exit_states>
+<exit_state name="1" target="Element@1209559624:1648576817643"/>
+<exit_state name="2" target="Element@1302425711:1646044943082"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1606544455:1661965140597" name="SET_AGENT_TRANSFER_OT" type="Action" width="189" x="589" y="660">
+<exit_states>
+<exit_state name="done" target="Element@21980093:1661965155417"/>
+</exit_states>
+</element>
+<element height="46" id="Element@21980093:1661965155417" name="AGENT TRANSFER_PE" type="Page Connector" width="163" x="827" y="736">
+<page_connector target="Element@1147398060:1644998301421">AGENT TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1796582862:1662008068017" name="CHECK_OPENTICKET_FLAG" type="Decision" width="193" x="322" y="325">
+<exit_states>
+<exit_state name="Y" target="Element@1302425711:1646044943082"/>
+<exit_state name="N" target="Element@1648957410:1648576817643"/>
+</exit_states>
+</element>
+</page>

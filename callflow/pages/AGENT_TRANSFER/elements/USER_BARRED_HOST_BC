@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1579490612:1651751286561" name="USER_BARRED_HOST_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.transfer.UserBarredCheck</source>
+</config>
+</decision>

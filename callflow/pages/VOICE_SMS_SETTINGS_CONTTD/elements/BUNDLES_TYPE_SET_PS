@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@27066228:1648033794523" name="BUNDLES_TYPE_SET_PS" version="6.0.1">
+<config>
+<source type="Class">com.common.buygiftbundles.BundleTypeAssign</source>
+</config>
+</action>

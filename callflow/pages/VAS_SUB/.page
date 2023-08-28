@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1246553077:1650133689296" name="VAS_SUB" version="6.0.1">
+<element height="46" id="Element@937280076:1650133689296" name="VAS_SUB_PE" type="Page Entry" width="114" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@1264286911:1650133764477"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1121999485:1650133764477" name="AA_PRP_XX_MN_0059_BC" type="Decision" width="185" x="278" y="245">
+<exit_states>
+<exit_state name="1" target="Element@775199149:1650133947972"/>
+<exit_state name="2" target="Element@1685677462:1650133972009"/>
+<exit_state name="3" target="Element@1724929522:1650133971022"/>
+<exit_state name="4" target="Element@1924977676:1650133972727"/>
+<exit_state name="6" target="Element@240565278:1650134052922"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1264286911:1650133764477" name="AA_PRP_XX_MN_0059_DM" src="ServionCombTriesForm" type="Voice Element" width="189" x="270" y="129">
+<exit_states>
+<exit_state name="done" target="Element@1121999485:1650133764477"/>
+<exit_state name="max_nomatch" target="Element@1851082525:1650133824595"/>
+<exit_state name="max_noinput" target="Element@1851082525:1650133824595">
+<bendpoint>
+<dim1 x="219" y="-19"/>
+<dim2 x="-114" y="-24"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@1851082525:1650133824595">
+<bendpoint>
+<dim1 x="216" y="46"/>
+<dim2 x="-117" y="41"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1851082525:1650133824595" name="MaxTries_PE" type="Page Connector" width="140" x="620" y="137">
+<page_connector target="Element@2083153167:1644263127724">MaxTries_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@482022711:1650133824595" name="AA_PRP_XX_MN_0059_PE" type="Page Entry" width="185" x="11" y="111">
+<exit_states>
+<exit_state name="next" target="Element@1264286911:1650133764477"/>
+</exit_states>
+</element>
+<element height="46" id="Element@775199149:1650133947972" name="VAS_AUDIO1_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="136" x="107" y="329">
+<exit_states>
+<exit_state name="done" target="Element@1782415938:1650134068808"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1724929522:1650133971022" name="VAS_AUDIO3_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="136" x="398" y="329">
+<exit_states>
+<exit_state name="done" target="Element@1782415938:1650134068808"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1685677462:1650133972009" name="VAS_AUDIO2_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="136" x="258" y="329">
+<exit_states>
+<exit_state name="done" target="Element@1782415938:1650134068808"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1924977676:1650133972727" name="VAS_AUDIO4_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="136" x="555" y="328">
+<exit_states>
+<exit_state name="done" target="Element@1782415938:1650134068808"/>
+</exit_states>
+</element>
+<element height="46" id="Element@240565278:1650134052922" name="REPEAT_TRIES_PE" type="Page Connector" width="213" x="-9" y="247">
+<page_connector target="Element@742456021:1648060963212">REPEAT_TRIES_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1782415938:1650134068808" name="GLOBAL_PROMPT_2_PE" type="Page Connector" width="175" x="283" y="459">
+<page_connector target="Element@1574626982:1644299708437">GLOBAL_PROMPT_2_PE<config/>
+</page_connector>
+</element>
+</page>

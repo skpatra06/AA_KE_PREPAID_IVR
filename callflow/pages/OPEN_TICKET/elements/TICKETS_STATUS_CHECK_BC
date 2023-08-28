@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@65273746:1657802076275" name="TICKETS_STATUS_CHECK_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.TicketAnalysis</source>
+</config>
+</decision>

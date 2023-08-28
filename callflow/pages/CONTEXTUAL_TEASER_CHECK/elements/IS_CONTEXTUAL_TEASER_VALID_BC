@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@110506708:1648576494885" name="IS_CONTEXTUAL_TEASER_VALID_BC" version="6.0.1">
+<config>
+<source type="Class">com.prepaid.ReadContextualTeaser</source>
+</config>
+</decision>

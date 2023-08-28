@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1555393645:1645423707839" name="AA_PRP_XX_PA_0057_PP" version="6.0.1">
+<config>
+<dynamic base_config="true" type="Class">com.airtel.core.AudioElementEntry</dynamic>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="false" uri=""/>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+<session_data>
+<data create_when="Before" name="S_REPEAT_HOST_FLAG">FALSE</data>
+</session_data>
+</config>
+</voice_element>

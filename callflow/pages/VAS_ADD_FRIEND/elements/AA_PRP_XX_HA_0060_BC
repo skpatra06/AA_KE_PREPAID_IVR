@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1776651163:1644476655770" name="AA_PRP_XX_HA_0060_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.faf.Subscriber_Product_GetFAF_EligibleCheck</source>
+</config>
+</decision>

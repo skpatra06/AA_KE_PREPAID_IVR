@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@69386513:1649096728686" name="NO_VALIDATION_RECHARGE_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.digitcondition.NumberValidation</source>
+</config>
+</decision>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1114223033:1644524619933" name="PUK_NUMBER" version="6.0.1">
+<element height="46" id="Element@1321058277:1644524619933" name="PUK_NUMBER_PE" type="Page Entry" width="143" x="373" y="-127">
+<exit_states>
+<exit_state name="next" target="Element@310702827:1647452048573"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1188153841:1644551629332" name="PUK_NUMBER_RET_PE" type="Page Entry" width="167" x="957" y="-4">
+<exit_states>
+<exit_state name="next" target="Element@569073692:1644551629332"/>
+</exit_states>
+</element>
+<element height="46" id="Element@169371549:1644551629332" name="DOB_KYC_ID_CHECK_PE" type="Page Connector" width="178" x="373" y="409">
+<page_connector target="Element@1189345923:1644549705658">DOB_KYC_ID_CHECK_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1978280142:1644551629332" name="AA_PRP_XX_MN_0019_PE" type="Page Entry" width="183" x="75" y="239">
+<exit_states>
+<exit_state name="next" target="Element@1745276723:1644551629332"/>
+</exit_states>
+</element>
+<element height="46" id="Element@237749515:1644551629332" name="AA_PRP_XX_HA_0017_BC" type="Decision" width="182" x="945" y="163">
+<exit_states>
+<exit_state name="SU" target="Element@2083458124:1644554924721"/>
+<exit_state name="ER" target="Element@1724831534:1644551629332"/>
+<exit_state name="NR" target="Element@1724831534:1644551629332">
+<bendpoint>
+<dim1 x="178" y="-62"/>
+<dim2 x="-82" y="-72"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@444576859:1644551629332" name="AA_PRP_XX_MN_0019_BC" type="Decision" width="185" x="353" y="325">
+<exit_states>
+<exit_state name="1" target="Element@169371549:1644551629332"/>
+<exit_state name="2" target="Element@1333297511:1646508928427"/>
+</exit_states>
+</element>
+<element height="46" id="Element@569073692:1644551629332" name="AA_PRP_XX_HA_0017_DB" type="Subflow Call" width="182" x="946" y="86">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644555507272">
+<config>
+<argument_data>
+<data name="HID">Subscriber_Profile_PUK_Details</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@237749515:1644551629332"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1745276723:1644551629332" name="AA_PRP_XX_MN_0019_DM" src="ServionCombTriesForm" type="Voice Element" width="189" x="349" y="239">
+<exit_states>
+<exit_state name="done" target="Element@444576859:1644551629332"/>
+<exit_state name="max_nomatch" target="Element@1027399897:1644551629332"/>
+<exit_state name="max_noinput" target="Element@1027399897:1644551629332">
+<bendpoint>
+<dim1 x="204" y="44"/>
+<dim2 x="-152" y="22"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@1027399897:1644551629332">
+<bendpoint>
+<dim1 x="236" y="-13"/>
+<dim2 x="-120" y="-35"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1724831534:1644551629332" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="1205" y="173">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1027399897:1644551629332" name="MaxTries_PE" type="Page Connector" width="168" x="663" y="237">
+<page_connector target="Element@2083153167:1644263127724">MaxTries_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2083458124:1644554924721" name="SMS_API_10004" type="Subflow Call" width="131" x="976" y="253">
+<subflow_call subflow_name="SMS_GATEWAY" target="Element@31:1644551612648">
+<config>
+<argument_data>
+<data name="SMS_ID">SMS_API_10004</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1770941:1646509181509"/>
+</exit_states>
+</element>
+<element height="46" id="Element@681253516:1644554924721" name="GLOBAL_PROMPT_2_PE" type="Page Connector" width="175" x="942" y="416">
+<page_connector target="Element@1574626982:1644299708437">GLOBAL_PROMPT_2_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1459494252:1644844940788" name="AA_PRP_XX_MN_0018_PE" type="Page Entry" width="183" x="97" y="-57">
+<exit_states>
+<exit_state name="next" target="Element@310702827:1647452048573"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1333297511:1646508928427" name="STANDARD_ERROR_PE" type="Page Connector" width="213" x="53" y="342">
+<page_connector target="Element@33248930:1644933707349">STANDARD_ERROR_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1770941:1646509181509" name="AA_PRP_XX_PA_0011_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="942" y="333">
+<exit_states>
+<exit_state name="done" target="Element@681253516:1644554924721"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1108355555:1647452048572" name="AA_PRP_XX_MN_0018_BC" type="Decision" width="185" x="365" y="56">
+<exit_states>
+<exit_state name="done" target="Element@1198963802:1649059004846"/>
+<exit_state name="ERROR" target="Element@1198963802:1649059004846">
+<bendpoint>
+<dim1 x="-90" y="49"/>
+<dim2 x="-86" y="-50"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@539478546:1647452113502"/>
+<exit_state name="max_noinput" target="Element@539478546:1647452113502">
+<bendpoint>
+<dim1 x="154" y="41"/>
+<dim2 x="-107" y="41"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@310702827:1647452048573" name="AA_PRP_XX_MN_0018_DM" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="189" x="357" y="-31">
+<exit_states>
+<exit_state name="done" target="Element@1108355555:1647452048572"/>
+<exit_state name="max_nomatch" target="Element@1108355555:1647452048572">
+<bendpoint>
+<dim1 x="-136" y="66"/>
+<dim2 x="-139" y="-24"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@1108355555:1647452048572">
+<bendpoint>
+<dim1 x="124" y="67"/>
+<dim2 x="121" y="-23"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="123" y="83"/>
+<dim2 x="118" y="-24"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@539478546:1647452113502" name="STANDARD_ERROR_PE" type="Page Connector" width="168" x="653" y="56">
+<page_connector target="Element@33248930:1644933707349">STANDARD_ERROR_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1198963802:1649059004846" name="PUK_VALIDATION_BC" type="Decision" width="234" x="336" y="155">
+<exit_states>
+<exit_state name="YES" target="Element@539478546:1647452113502">
+<bendpoint>
+<dim1 x="293" y="2"/>
+<dim2 x="9" y="101"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NO" target="Element@1745276723:1644551629332"/>
+</exit_states>
+</element>
+</page>

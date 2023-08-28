@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1952014606:1644523024758" name="MANAGE_ACCOUNT" version="6.0.1">
+<element height="46" id="Element@792694196:1644523024758" name="MANAGE_ACCOUNT_PE" type="Page Entry" width="179" x="381" y="10">
+<exit_states>
+<exit_state name="next" target="Element@277475246:1644524368270"/>
+</exit_states>
+</element>
+<element height="46" id="Element@709659069:1644524368270" name="SIM_REGISTRATION_STATUS_PE" type="Page Connector" width="213" x="34" y="611">
+<page_connector target="Element@2016386019:1644524686187">SIM_REGISTRATION_STATUS_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@277475246:1644524368270" name="GSM_BALANCE_FLAG_CHECK" type="Decision" width="208" x="379" y="108">
+<exit_states>
+<exit_state name="Y" target="Element@1005156500:1644524368270"/>
+<exit_state name="N" target="Element@264722853:1644524368270">
+<bendpoint>
+<dim1 x="182" y="-2"/>
+<dim2 x="176" y="-214"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="189" y="146"/>
+<dim2 x="164" y="-75"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="168" y="170"/>
+<dim2 x="159" y="-51"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1511090616:1644524368270" name="SIM_STOLEN_UNBARRING_PE" type="Page Connector" width="205" x="290" y="607">
+<page_connector target="Element@633754963:1644524735715">SIM_STOLEN_UNBARRING_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1280082528:1644524368270" name="ME_2_U_AMOUNT_TRANSFER_PE" type="Page Connector" width="225" x="538" y="606">
+<page_connector target="Element@1213253854:1644556037488">ME_2_U_AMOUNT_TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1653241736:1644524368270" name="AA_PRP_XX_PA_0005_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="125" y="257">
+<exit_states>
+<exit_state name="done" target="Element@264722853:1644524368270">
+<bendpoint>
+<dim1 x="2" y="71"/>
+<dim2 x="-255" y="-2"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1682052312:1644524368270" name="LAST_5_TRANSACTIONS_PE" type="Page Connector" width="195" x="34" y="402">
+<page_connector target="Element@1185008990:1644524439362">LAST_5_TRANSACTIONS_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1085822763:1644524368270" name="PUK_NUMBER_PE" type="Page Connector" width="143" x="31" y="546">
+<page_connector target="Element@1321058277:1644524619933">PUK_NUMBER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1005156500:1644524368270" name="AA_PRP_XX_HA_0012_DB" type="Subflow Call" width="182" x="378" y="178">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644525087506">
+<config>
+<argument_data>
+<data name="HID">Subscriber_Profile_Balance</data>
+</argument_data>
+<input_data>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+<data name="S_ERROR_MSG"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1003802759:1644524368270"/>
+</exit_states>
+</element>
+<element height="46" id="Element@264722853:1644524368270" name="AA_PRP_XX_MN_0007_DM" src="ServionCombTriesForm" type="Voice Element" width="189" x="375" y="320">
+<exit_states>
+<exit_state name="done" target="Element@563014656:1644524368270"/>
+<exit_state name="max_nomatch" target="Element@347182053:1644524368270"/>
+<exit_state name="max_noinput" target="Element@347182053:1644524368270">
+<bendpoint>
+<dim1 x="136" y="48"/>
+<dim2 x="-105" y="43"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@347182053:1644524368270">
+<bendpoint>
+<dim1 x="257" y="-30"/>
+<dim2 x="-104" y="-34"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1401818740:1644524368270" name="AA_PRP_XX_MN_0007_PE" type="Page Entry" width="183" x="730" y="225">
+<exit_states>
+<exit_state name="next" target="Element@264722853:1644524368270"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1003802759:1644524368270" name="AA_PRP_XX_HA_0012_BC" type="Decision" width="182" x="378" y="252">
+<exit_states>
+<exit_state name="SuccessY" target="Element@1653241736:1644524368270"/>
+<exit_state name="Failure" target="Element@264722853:1644524368270"/>
+<exit_state name="SuccessN" target="Element@264722853:1644524368270">
+<bendpoint>
+<dim1 x="-135" y="46"/>
+<dim2 x="-135" y="-22"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@563014656:1644524368270" name="AA_PRP_XX_MN_0007_BC" type="Decision" width="185" x="377" y="439">
+<exit_states>
+<exit_state name="1" target="Element@1682052312:1644524368270"/>
+<exit_state name="2" target="Element@855251644:1644524368270"/>
+<exit_state name="3" target="Element@1085822763:1644524368270"/>
+<exit_state name="4" target="Element@709659069:1644524368270"/>
+<exit_state name="5" target="Element@1511090616:1644524368270"/>
+<exit_state name="6" target="Element@1280082528:1644524368270"/>
+<exit_state name="7" target="Element@931034933:1651493659528"/>
+<exit_state name="9" target="Element@1214111757:1646503787439"/>
+<exit_state name="STAR" target="Element@1598135226:1646503829799"/>
+<exit_state name="HASH" target="Element@1598135226:1646503829799">
+<bendpoint>
+<dim1 x="230" y="-32"/>
+<dim2 x="-96" y="-17"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@347182053:1644524368270" name="MaxTries_PE" type="Page Connector" width="140" x="774" y="319">
+<page_connector target="Element@2083153167:1644263127724">MaxTries_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@855251644:1644524368270" name="RECHARGE_PE" type="Page Connector" width="140" x="32" y="475">
+<page_connector target="Element@772152685:1644524515264">RECHARGE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1214111757:1646503787439" name="AGENT TRANSFER_PE" type="Page Connector" width="206" x="743" y="474">
+<page_connector target="Element@1147398060:1644998301421">AGENT TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1598135226:1646503829799" name="PREPAID_MAIN_MENU_PE" type="Page Connector" width="188" x="747" y="419">
+<page_connector target="Element@723358145:1644522701421">PREPAID_MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@931034933:1651493659528" name="TARRIF_PLAN_MIGRATION_PE" type="Page Connector" width="207" x="738" y="538">
+<page_connector target="Element@2045702369:1644524877341">TARRIF_PLAN_MIGRATION_PE<config/>
+</page_connector>
+</element>
+</page>

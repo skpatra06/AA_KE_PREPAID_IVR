@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@186201952:1644522623122" name="AA_PRP_XX_HA_0006_DB" version="6.0.1">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644522792157">
+<config>
+<argument_data>
+<data name="HID">SP_INSERT_UPDATE_LANGUAGE</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

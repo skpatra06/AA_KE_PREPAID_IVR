@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_invoke id="Element@1997034902:1660677122135" name="APP_TRANSFER" version="6.0.1">
+<config>
+<settings>
+<setting name="destination">/CVP/Server?application={Data.Session.S_TRANSFER_APP}&amp;RID={Data.Session.RID}&amp;_ani={Data.Session._ani}&amp;_dnis={Data.Session._dnis}&amp;_app=apptran</setting>
+<setting name="type">true</setting>
+<setting name="params"/>
+<setting name="returns">EV1</setting>
+<setting name="returns">EV2</setting>
+<setting name="returns">EV3</setting>
+<setting name="returns">EV4</setting>
+<setting name="returns">CT</setting>
+</settings>
+<session_data>
+<data create_when="After" name="S_APP_TRANSFER">YES</data>
+</session_data>
+</config>
+</subdialog_invoke>

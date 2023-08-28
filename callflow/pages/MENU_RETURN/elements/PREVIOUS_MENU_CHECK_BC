@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@165477935:1644911642654" name="PREVIOUS_MENU_CHECK_BC" version="6.0.1">
+<config>
+<source type="Class">com.airtel.core.PreviousMenu</source>
+</config>
+</decision>

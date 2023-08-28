@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@434766970:1644555114872" name="AA_PRP_XX_HA_0018_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.Get_KYC_Status</source>
+</config>
+</decision>

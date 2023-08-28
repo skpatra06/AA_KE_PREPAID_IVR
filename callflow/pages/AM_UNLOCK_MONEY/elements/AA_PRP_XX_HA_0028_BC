@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2009537389:1662991663583" name="AA_PRP_XX_HA_0028_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.amservices.AM_Profile_KYC_Request_Acc_Unlock</source>
+</config>
+</decision>

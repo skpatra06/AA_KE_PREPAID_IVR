@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@388377471:1644524164930" name="VIP_DIAMOND_SME_CALLER_MENU" version="6.0.1">
+<element height="46" id="Element@1089832597:1644524164930" name="VIP_DIAMOND_SME_CALLER_MENU_PE" type="Page Entry" width="259" x="344" y="27">
+<exit_states>
+<exit_state name="next" target="Element@707654769:1644524243563"/>
+</exit_states>
+</element>
+<element height="46" id="Element@418965887:1644524243563" name="AA_PRP_XX_HA_0011_BC" type="Decision" width="182" x="389" y="260">
+<exit_states>
+<exit_state name="NO" target="Element@332503344:1644524243563">
+<bendpoint>
+<dim1 x="3" y="84"/>
+<dim2 x="-2" y="-77"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@332503344:1644524243563">
+<bendpoint>
+<dim1 x="-54" y="86"/>
+<dim2 x="-59" y="-75"/>
+</bendpoint>
+</exit_state>
+<exit_state name="YES" target="Element@707267975:1644524243563"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1497203546:1644524243563" name="AIRTEL_MONEY_SERVICES_PE" type="Page Connector" width="204" x="686" y="691">
+<page_connector target="Element@1321329658:1644293409281">AIRTEL_MONEY_SERVICES_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@4221947:1644524243563" name="AA_PRP_XX_HA_0011_DB" type="Subflow Call" width="182" x="390" y="188">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644525124184">
+<config>
+<argument_data>
+<data name="HID">SP_GET_VIP_TO_AGENT</data>
+</argument_data>
+<input_data>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+<data name="S_ERROR_MSG"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@418965887:1644524243563"/>
+</exit_states>
+</element>
+<element height="46" id="Element@707267975:1644524243563" name="AGENT TRANSFER_PE" type="Page Connector" width="170" x="692" y="292">
+<page_connector target="Element@1147398060:1644998301421">AGENT TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@641986371:1644524243563" name="AA_PRP_XX_MN_0005_PE" type="Page Entry" width="183" x="148" y="364">
+<exit_states>
+<exit_state name="next" target="Element@332503344:1644524243563"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1828674427:1644524243563" name="AGENT TRANSFER_PE" type="Page Connector" width="206" x="205" y="581">
+<page_connector target="Element@1147398060:1644998301421">AGENT TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@332503344:1644524243563" name="AA_PRP_XX_MN_0005_DM" src="ServionCombTriesForm" type="Voice Element" width="189" x="391" y="389">
+<exit_states>
+<exit_state name="done" target="Element@1877211855:1644524243563"/>
+<exit_state name="max_nomatch" target="Element@695746352:1644524243563"/>
+<exit_state name="max_noinput" target="Element@695746352:1644524243563">
+<bendpoint>
+<dim1 x="136" y="48"/>
+<dim2 x="-105" y="43"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@695746352:1644524243563">
+<bendpoint>
+<dim1 x="202" y="-40"/>
+<dim2 x="-116" y="-25"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1877211855:1644524243563" name="AA_PRP_XX_MN_0005_BC" type="Decision" width="185" x="390" y="483">
+<exit_states>
+<exit_state name="1" target="Element@856945802:1644524243563"/>
+<exit_state name="9" target="Element@1828674427:1644524243563"/>
+</exit_states>
+</element>
+<element height="46" id="Element@707654769:1644524243563" name="VIP_AGENT_TRANSFER_FLAG_CHECK_BC" type="Decision" width="265" x="341" y="105">
+<exit_states>
+<exit_state name="Y" target="Element@4221947:1644524243563"/>
+<exit_state name="N" target="Element@332503344:1644524243563">
+<bendpoint>
+<dim1 x="-278" y="-2"/>
+<dim2 x="-290" y="-286"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-279" y="189"/>
+<dim2 x="-291" y="-95"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@695746352:1644524243563" name="MaxTries_PE" type="Page Connector" width="140" x="758" y="420">
+<page_connector target="Element@2083153167:1644263127724">MaxTries_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1311425796:1644524243563" name="PREPAID_MAIN_MENU_PE" type="Page Connector" width="188" x="468" y="691">
+<page_connector target="Element@723358145:1644522701421">PREPAID_MAIN_MENU_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@856945802:1644524243563" name="SHORT_CODE_CHECK_BC" type="Decision" width="185" x="541" y="581">
+<exit_states>
+<exit_state name="AIRTEL_MONEY" target="Element@1497203546:1644524243563"/>
+<exit_state name="PREPAID" target="Element@1311425796:1644524243563"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@498238038:1644523935971" name="AA_PRP_XX_HA_0010_DB" version="6.0.1">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644525149401">
+<config>
+<argument_data>
+<data name="HID">Get_RepeatCaller</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

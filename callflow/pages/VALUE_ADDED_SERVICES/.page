@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@415898874:1644436741848" name="VALUE_ADDED_SERVICES" version="6.0.1">
+<element height="46" id="Element@1944781902:1644436741848" name="VALUE_ADDED_SERVICES_PE" type="Page Entry" width="199" x="352" y="29">
+<exit_states>
+<exit_state name="next" target="Element@418713281:1644436903800"/>
+</exit_states>
+</element>
+<element height="46" id="Element@418713281:1644436903800" name="VAS_FLAG_CHECK_BC" type="Decision" width="166" x="375" y="99">
+<exit_states>
+<exit_state name="Yes" target="Element@1622979774:1644436951916"/>
+<exit_state name="No" target="Element@593068331:1644437174633">
+<bendpoint>
+<dim1 x="174" y="2"/>
+<dim2 x="-4" y="-253"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1622979774:1644436951916" name="AA_PRP_XX_HA_0051_DB" type="Subflow Call" width="182" x="356" y="176">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644436959018">
+<config>
+<argument_data>
+<data name="HID">Vas_Services_Active</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@148794641:1644437038777">
+<bendpoint>
+<dim1 x="4" y="48"/>
+<dim2 x="2" y="-39"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@148794641:1644437038777" name="AA_PRP_XX_HA_0051_BC" type="Decision" width="182" x="358" y="263">
+<exit_states>
+<exit_state name="SuccessY" target="Element@1382251731:1644437113956"/>
+<exit_state name="SuccessNull" target="Element@593068331:1644437174633"/>
+<exit_state name="Failure" target="Element@593068331:1644437174633">
+<bendpoint>
+<dim1 x="185" y="0"/>
+<dim2 x="-2" y="-91"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1382251731:1644437113956" name="AA_PRP_XX_PA_0047_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="163" y="351">
+<exit_states>
+<exit_state name="done" target="Element@593068331:1644437174633"/>
+</exit_states>
+</element>
+<element height="46" id="Element@593068331:1644437174633" name="VALUE_ADDED_SERVICES_CONTD_PE" type="Page Connector" width="250" x="511" y="354">
+<page_connector target="Element@917751533:1644437183277">VALUE_ADDED_SERVICES_CONTD_PE<config/>
+</page_connector>
+</element>
+</page>

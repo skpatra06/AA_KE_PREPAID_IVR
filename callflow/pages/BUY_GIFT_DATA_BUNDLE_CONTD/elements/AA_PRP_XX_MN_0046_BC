@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1046535926:1654602610570" name="AA_PRP_XX_MN_0046_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="AA_PRP_XX_MN_0046_BC" default_exit_state="2">
+        <exit_state name="1" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="AA_PRP_XX_MN_0046_DM" variable="value" />
+                </data>
+                <constant_string value="1" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

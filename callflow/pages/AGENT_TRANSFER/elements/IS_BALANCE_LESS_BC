@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@150681666:1644998926994" name="IS_BALANCE_LESS_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.transfer.PaidAgentTransferBalCheck</source>
+</config>
+</decision>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@150131811:1644489815092" name="AA_PRP_XX_HA_0074_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.Testclass</source>
+</config>
+</decision>

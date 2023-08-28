@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@63112952:1644524686187" name="SIM_REGISTRATION_STATUS" version="6.0.1">
+<element height="46" id="Element@2016386019:1644524686187" name="SIM_REGISTRATION_STATUS_PE" type="Page Entry" width="213" x="310" y="-191">
+<exit_states>
+<exit_state name="next" target="Element@1624108471:1651686459458"/>
+</exit_states>
+</element>
+<element height="46" id="Element@549912509:1644555114871" name="AA_PRP_XX_HA_0018_DB" type="Subflow Call" width="182" x="340" y="140">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644555495512">
+<config>
+<argument_data>
+<data name="HID">Get_KYC_Status_HA_0068</data>
+</argument_data>
+<input_data>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+<data name="S_ERROR_MSG"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@434766970:1644555114872"/>
+</exit_states>
+</element>
+<element height="46" id="Element@145277674:1644555114872" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="581" y="277">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@434766970:1644555114872" name="AA_PRP_XX_HA_0018_BC" type="Decision" width="182" x="349" y="215">
+<exit_states>
+<exit_state name="NRMN" target="Element@451238316:1648284682929"/>
+<exit_state name="RMN" target="Element@829421437:1648284717218"/>
+<exit_state name="ER" target="Element@145277674:1644555114872"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1451548955:1644555114872" name="GLOBAL_PROMPT_2_PE" type="Page Connector" width="175" x="298" y="493">
+<page_connector target="Element@1574626982:1644299708437">GLOBAL_PROMPT_2_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@451238316:1648284682929" name="AA_PRP_XX_PA_0013_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="398" y="303">
+<exit_states>
+<exit_state name="done" target="Element@1424788403:1651059445673"/>
+</exit_states>
+</element>
+<element height="46" id="Element@829421437:1648284717218" name="AA_PRP_XX_PA_0012_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="150" y="305">
+<exit_states>
+<exit_state name="done" target="Element@627014926:1651059411048"/>
+</exit_states>
+</element>
+<element height="46" id="Element@627014926:1651059411048" name="SMS_API_10026" type="Subflow Call" width="180" x="207" y="395">
+<subflow_call subflow_name="SMS_GATEWAY" target="Element@31:1644551612648">
+<config>
+<argument_data>
+<data name="SMS_ID">SMS_API_10026</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1451548955:1644555114872"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1424788403:1651059445673" name="SMS_API_10027" type="Subflow Call" width="180" x="426" y="402">
+<subflow_call subflow_name="SMS_GATEWAY" target="Element@31:1644551612648">
+<config>
+<argument_data>
+<data name="SMS_ID">SMS_API_10027</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1451548955:1644555114872"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1624108471:1651686459458" name="SET_KYC_MOBILENUM" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="178" x="333" y="-126">
+<exit_states>
+<exit_state name="done" target="Element@104540746:1655105272367"/>
+</exit_states>
+</element>
+<element height="46" id="Element@104540746:1655105272367" name="GET_KYC_AUTH_TOKEN2" type="Subflow Call" width="229" x="303" y="-38">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644564160821">
+<config>
+<argument_data>
+<data name="HID">Get_Kyc_Token_Generation</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@897691437:1655105272367"/>
+</exit_states>
+</element>
+<element height="46" id="Element@897691437:1655105272367" name="SET_AUTH_TOKEN2" type="Action" width="220" x="321" y="41">
+<exit_states>
+<exit_state name="done" target="Element@549912509:1644555114871"/>
+</exit_states>
+</element>
+</page>

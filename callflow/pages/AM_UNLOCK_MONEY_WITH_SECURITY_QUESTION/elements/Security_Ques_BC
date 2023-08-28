@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@646524689:1657178166912" name="Security_Ques_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.amservices.Check_Security_Question</source>
+</config>
+</decision>

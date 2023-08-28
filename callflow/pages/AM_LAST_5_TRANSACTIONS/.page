@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@956284778:1644301572006" name="AM_LAST_5_TRANSACTIONS" version="6.0.1">
+<element height="46" id="Element@1527166941:1644301572006" name="AM_LAST_5_TRANSACTIONS_PE" type="Page Entry" width="219" x="242" y="-126">
+<exit_states>
+<exit_state name="next" target="Element@777795946:1651657051053"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1802557950:1644317225899" name="AA_PRP_XX_HA_0033_DB" type="Subflow Call" width="199" x="607" y="102">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644308219913">
+<config>
+<argument_data>
+<data name="HID">AM_SendMoney_LastFiveTrasaction</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@245526092:1644317265484"/>
+</exit_states>
+</element>
+<element height="46" id="Element@245526092:1644317265484" name="AA_PRP_XX_HA_0033_BC" type="Decision" width="182" x="606" y="179">
+<exit_states>
+<exit_state name="YES" target="Element@1875431736:1644317378233">
+<bendpoint>
+<dim1 x="-130" y="8"/>
+<dim2 x="-2" y="-80"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@1169967900:1644317328197"/>
+<exit_state name="NO" target="Element@1868218627:1644317442478">
+<bendpoint>
+<dim1 x="127" y="105"/>
+<dim2 x="255" y="-140"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1169967900:1644317328197" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="905" y="234">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1875431736:1644317378233" name="SMS_API_10012" type="Subflow Call" width="219" x="460" y="267">
+<subflow_call subflow_name="SMS_GATEWAY" target="Element@31:1644314857774">
+<config>
+<argument_data>
+<data name="SMS_ID">SMS_API_10012</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@557126190:1644317378233"/>
+</exit_states>
+</element>
+<element height="46" id="Element@557126190:1644317378233" name="AA_PRP_XX_PA_0033_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="227" x="458" y="348">
+<exit_states>
+<exit_state name="done" target="Element@1868218627:1644317442478"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1868218627:1644317442478" name="GLOBAL_PROMPT_2_PE" type="Page Connector" width="175" x="482" y="424">
+<page_connector target="Element@1574626982:1644299708437">GLOBAL_PROMPT_2_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@777795946:1651657051053" name="AA_PRP1_XX_MN_0072_DM" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="238" x="220" y="-49">
+<exit_states>
+<exit_state name="done" target="Element@2096683358:1651657051053"/>
+<exit_state name="max_nomatch" target="Element@2096683358:1651657051053">
+<bendpoint>
+<dim1 x="-97" y="60"/>
+<dim2 x="-86" y="-65"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@2096683358:1651657051053">
+<bendpoint>
+<dim1 x="77" y="64"/>
+<dim2 x="88" y="-61"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1680183267:1651657051054" name="AA_PRP1_XX_MN_0072_PE" type="Page Entry" width="189" x="-78" y="-46">
+<exit_states>
+<exit_state name="next" target="Element@777795946:1651657051053"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1378631566:1651657051053" name="Pin_Tries_PE" type="Page Connector" width="188" x="-71" y="97">
+<page_connector target="Element@812667596:1644304799377">Pin_Tries_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2096683358:1651657051053" name="AA_PRP1_XX_MN_0072_BC" type="Decision" width="234" x="215" y="43">
+<exit_states>
+<exit_state name="done" target="Element@773612230:1657893094796"/>
+<exit_state name="ERROR" target="Element@773612230:1657893094796">
+<bendpoint>
+<dim1 x="180" y="-93"/>
+<dim2 x="-204" y="32"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@1378631566:1651657051053"/>
+<exit_state name="max_noinput" target="Element@1378631566:1651657051053"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1000004628:1657893094796" name="HOST_DB_API_DOWN_PE" type="Page Connector" width="183" x="883" y="30">
+<page_connector target="Element@188223681:1644297540776">HOST_DB_API_DOWN_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@773612230:1657893094796" name="AA_PRP1_XX_HA_0067_DB" type="Subflow Call" width="188" x="618" y="-65">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644291101761">
+<config>
+<argument_data>
+<data name="HID">AM_PIN_Validation</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1645481513:1657893094796"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1645481513:1657893094796" name="AA_PRP1_XX_HA_0067_BC" type="Decision" width="188" x="616" y="25">
+<exit_states>
+<exit_state name="SU" target="Element@1802557950:1644317225899"/>
+<exit_state name="ER" target="Element@1000004628:1657893094796"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@226259364:1644302384593" name="AA_PRP_XX_MN_0037_BC" version="6.0.1">
+<config>
+<source type="Class">com.airtel.core.MenuElementExit</source>
+</config>
+</decision>

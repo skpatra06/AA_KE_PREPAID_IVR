@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1033217863:1644486644185" name="AA_PRP_XX_HA_0063_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.faf.Subscriber_Product_ManageFAFList_RM_Frnd</source>
+</config>
+</decision>

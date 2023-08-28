@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1647338052:1644522701421" name="PREPAID_MAIN_MENU" version="6.0.1">
+<element height="46" id="Element@723358145:1644522701421" name="PREPAID_MAIN_MENU_PE" type="Page Entry" width="192" x="350" y="106">
+<exit_states>
+<exit_state name="next" target="Element@1190796945:1644522906656"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1409349151:1644522906691" name="AA_PRP_XX_MN_0006_BC" type="Decision" width="185" x="361" y="299">
+<exit_states>
+<exit_state name="1" target="Element@215233947:1644522906691"/>
+<exit_state name="2" target="Element@1617838297:1644522906656"/>
+<exit_state name="3" target="Element@1258466287:1663475640628"/>
+<exit_state name="4" target="Element@81512298:1653395698068"/>
+<exit_state name="5" target="Element@302976577:1644522906691"/>
+<exit_state name="6" target="Element@1236341395:1657802166135"/>
+<exit_state name="0" target="Element@1615521235:1644522906656"/>
+<exit_state name="7" target="Element@1087117504:1644522906691"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1615521235:1644522906656" name="CHANGE_LANGUAGE_PE" type="Page Connector" width="182" x="-31" y="310">
+<page_connector target="Element@259097450:1644301296410">CHANGE_LANGUAGE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1227817310:1644522906691" name="AA_PRP_XX_MN_0006_PE" type="Page Entry" width="183" x="111" y="184">
+<exit_states>
+<exit_state name="next" target="Element@1190796945:1644522906656"/>
+</exit_states>
+</element>
+<element height="46" id="Element@215233947:1644522906691" name="MANAGE_ACCOUNT_PE" type="Page Connector" width="179" x="-68" y="456">
+<page_connector target="Element@792694196:1644523024758">MANAGE_ACCOUNT_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1617838297:1644522906656" name="AIRTEL_MONEY_SERVICES_PE" type="Page Connector" width="204" x="134" y="484">
+<page_connector target="Element@1321329658:1644293409281">AIRTEL_MONEY_SERVICES_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1087117504:1644522906691" name="DOWNLOAD_AIRTEL_APP_PE" type="Page Connector" width="203" x="889" y="299">
+<page_connector target="Element@1334706478:1644523248195">DOWNLOAD_AIRTEL_APP_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@302976577:1644522906691" name="VALUE_ADDED_SERVICES_CONTD_PE" type="Page Connector" width="244" x="897" y="443">
+<page_connector target="Element@917751533:1644437183277">VALUE_ADDED_SERVICES_CONTD_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2130450223:1644522906691" name="MaxTries_PE" type="Page Connector" width="140" x="696" y="203">
+<page_connector target="Element@2083153167:1644263127724">MaxTries_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1190796945:1644522906656" name="AA_PRP_XX_MN_0006_DM" src="ServionCombTriesForm" type="Voice Element" width="189" x="355" y="206">
+<exit_states>
+<exit_state name="done" target="Element@1409349151:1644522906691"/>
+<exit_state name="max_nomatch" target="Element@2130450223:1644522906691"/>
+<exit_state name="max_noinput" target="Element@2130450223:1644522906691">
+<bendpoint>
+<dim1 x="205" y="28"/>
+<dim2 x="-112" y="31"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@2130450223:1644522906691">
+<bendpoint>
+<dim1 x="196" y="-48"/>
+<dim2 x="-71" y="-33"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@81512298:1653395698068" name="VOICE_SMS_SETTINGS_PE" type="Page Connector" width="244" x="622" y="463">
+<page_connector target="Element@1742946858:1644411123728">VOICE_SMS_SETTINGS_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@480922428:1653395700430" name="DATA_INTERNET_SETTINGS_PE" type="Page Connector" width="239" x="366" y="530">
+<page_connector target="Element@1264064343:1644304249596">DATA_INTERNET_SETTINGS_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1236341395:1657802166135" name="OPEN_TICKET_PE" type="Page Connector" width="203" x="900" y="363">
+<page_connector target="Element@321228991:1657802076275">OPEN_TICKET_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1258466287:1663475640628" name="SET_BUNDLE_TYPE_PS" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="166" x="388" y="431">
+<exit_states>
+<exit_state name="done" target="Element@480922428:1653395700430"/>
+</exit_states>
+</element>
+</page>

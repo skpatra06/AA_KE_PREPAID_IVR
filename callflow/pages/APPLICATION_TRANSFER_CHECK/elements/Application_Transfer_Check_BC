@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@659196888:1649143768659" name="Application_Transfer_Check_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.start.ApplicationTransferCheck</source>
+</config>
+</decision>

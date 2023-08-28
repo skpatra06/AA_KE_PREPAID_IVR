@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subflow_return id="Element@2098260219:1644262211013" name="Subflow Return_01" version="6.0.1">
+<config>
+<return_data>
+<data name="S_ERROR_MSG" type="String">{Data.Session.S_ERROR_MSG}</data>
+<data name="S_STATUS_CODE" type="String">{Data.Session.S_STATUS_CODE}</data>
+<data name="S_ERROR_CODE" type="String">{Data.Session.S_ERROR_CODE}</data>
+</return_data>
+</config>
+</subflow_return>

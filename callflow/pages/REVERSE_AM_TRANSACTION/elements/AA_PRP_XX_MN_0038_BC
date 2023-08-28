@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@463195479:1644303186441" name="AA_PRP_XX_MN_0038_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.amservices.AM_Reversal_Last5_Trans_CheckUserChoice</source>
+</config>
+</decision>

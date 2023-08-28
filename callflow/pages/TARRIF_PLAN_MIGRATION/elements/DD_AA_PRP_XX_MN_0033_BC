@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2009349826:1644564313066" name="DD_AA_PRP_XX_MN_0033_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.tariffplans.ProductCatalogCheckUserChoice</source>
+</config>
+</decision>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@2017580582:1654600928774" name="PURCHASE_TYPE_CHECK_BC" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="PURCHASE_TYPE_CHECK_BC" default_exit_state="BUY">
+        <exit_state name="GIFT" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="S_PURCHASE_TYPE" />
+                </data>
+                <constant_string value="GIFT" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

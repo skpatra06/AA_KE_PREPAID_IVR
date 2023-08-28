@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1421450460:1644522623122" name="AA_PRP_XX_MN_0003_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.language.SetChangedLanguage</source>
+</config>
+</decision>

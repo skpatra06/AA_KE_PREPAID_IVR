@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1042766351:1644473102459" name="AA_PRP_XX_HA_0054_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.vas.Vas_Subscribe_Details</source>
+</config>
+</decision>

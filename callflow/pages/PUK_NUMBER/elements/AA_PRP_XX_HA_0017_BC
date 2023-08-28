@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@237749515:1644551629332" name="AA_PRP_XX_HA_0017_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.puk.Subscriber_Profile_PUK_Details</source>
+</config>
+</decision>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@84369027:1644468874428" name="AA_PRP_XX_HA_0052_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.vas.UnSubscribe_RBT_Service</source>
+</config>
+</decision>

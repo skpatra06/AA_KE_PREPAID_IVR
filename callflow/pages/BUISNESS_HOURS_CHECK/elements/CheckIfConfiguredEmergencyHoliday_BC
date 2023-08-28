@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1956662442:1644572889482" name="CheckIfConfiguredEmergencyHoliday_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.transfer.CheckHolidays</source>
+</config>
+</decision>

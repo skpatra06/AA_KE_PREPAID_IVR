@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@869177035:1644261399849" name="START" version="6.0.1">
+<element height="46" id="Element@781180694:1644261399843" name="Start Of Call" start_of_call="true" type="Page Entry" width="113" x="579" y="-25">
+<exit_states>
+<exit_state name="next" target="Element@671828702:1644261459199"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1532403024:1644261459200" name="AA_PRP_XX_HA_0001A_DB" type="Subflow Call" width="190" x="548" y="424">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644262551144">
+<config>
+<argument_data>
+<data name="HID">Subscriber_Profile_LineType</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@2038627269:1644261459199"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1111295632:1644261459199" name="FRAUD_CALLER_CHECK" type="Decision" width="176" x="1070" y="-80">
+<exit_states>
+<exit_state name="Y" target="Element@1067018137:1644261459200"/>
+<exit_state name="N" target="Element@1742209070:1659524716245"/>
+</exit_states>
+</element>
+<element height="46" id="Element@486082352:1644261459200" name="AA_PRP_XX_HA_0002_BC" type="Decision" width="205" x="1383" y="12">
+<exit_states>
+<exit_state name="SU" target="Element@1742209070:1659524716245"/>
+<exit_state name="ER" target="Element@1742209070:1659524716245">
+<bendpoint>
+<dim1 x="-207" y="17"/>
+<dim2 x="111" y="35"/>
+</bendpoint>
+</exit_state>
+<exit_state name="FRAUD" target="Element@1367204671:1644261459199"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1367204671:1644261459199" name="AA_PRP_XX_PA_0001_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="1387" y="120">
+<exit_states>
+<exit_state name="done" target="Element@187506116:1644261459199"/>
+</exit_states>
+</element>
+<element height="46" id="Element@671828702:1644261459199" name="CVP Subdialog Start_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogStartElement" type="Subdialog Start" width="172" x="549" y="59">
+<exit_states>
+<exit_state name="done" target="Element@1063498900:1645625580240"/>
+</exit_states>
+</element>
+<element height="46" id="Element@410287619:1644261459199" name="AA_PRP_XX_PA_0002_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="178" x="1085" y="491">
+<exit_states>
+<exit_state name="done" target="Element@616308808:1655118216028"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1067018137:1644261459200" name="AA_PRP_XX_HA_0002_DB" type="Subflow Call" width="205" x="1386" y="-81">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644262633146">
+<config>
+<argument_data>
+<data name="HID">SP_GET_FRAUD_CALLER</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@486082352:1644261459200"/>
+</exit_states>
+</element>
+<element height="46" id="Element@658435688:1644261459197" name="AA_PRP_XX_MN_0001_DM" src="ServionCombTriesForm" type="Voice Element" width="189" x="-241" y="413">
+<exit_states>
+<exit_state name="done" target="Element@2129473263:1644261459197"/>
+<exit_state name="max_nomatch" target="Element@2069207377:1644261459199"/>
+<exit_state name="max_noinput" target="Element@2069207377:1644261459199">
+<bendpoint>
+<dim1 x="210" y="-12"/>
+<dim2 x="-64" y="46"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_combinedtries" target="Element@2069207377:1644261459199">
+<bendpoint>
+<dim1 x="157" y="-67"/>
+<dim2 x="-117" y="-9"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@2038627269:1644261459199" name="AA_PRP_XX_HA_0001A_BC" type="Decision" width="190" x="543" y="505">
+<exit_states>
+<exit_state name="SU" target="Element@1377869842:1649143883607"/>
+<exit_state name="ER" target="Element@1377869842:1649143883607">
+<bendpoint>
+<dim1 x="-151" y="36"/>
+<dim2 x="152" y="43"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@187506116:1644261459199" name="DISC_PE" type="Page Connector" width="140" x="1406" y="215">
+<page_connector target="Element@114449137:1644263127724">DISC_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@2069207377:1644261459199" name="MaxTries_PE" type="Page Connector" width="168" x="15" y="351">
+<page_connector target="Element@2083153167:1644263127724">MaxTries_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1903500392:1644261459200" name="AA_PRP_XX_HA_0001_BC" type="Decision" width="182" x="549" y="330">
+<exit_states>
+<exit_state name="SU" target="Element@1377869842:1649143883607">
+<bendpoint>
+<dim1 x="-205" y="59"/>
+<dim2 x="109" y="-112"/>
+</bendpoint>
+</exit_state>
+<exit_state name="NR" target="Element@1532403024:1644261459200"/>
+<exit_state name="ER" target="Element@1377869842:1649143883607"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2087150067:1644261459199" name="AA_PRP_XX_HA_0001_DB" type="Subflow Call" width="182" x="555" y="238">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644262538931">
+<config>
+<argument_data>
+<data name="HID">SP_GET_IVR_SEGMENTATION</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1903500392:1644261459200"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2129473263:1644261459197" name="AA_PRP_XX_MN_0001_BC" type="Decision" width="185" x="-238" y="515">
+<exit_states>
+<exit_state name="1" target="Element@1882664700:1644261459199"/>
+<exit_state name="ER" target="Element@2069207377:1644261459199">
+<bendpoint>
+<dim1 x="240" y="-68"/>
+<dim2 x="-19" y="52"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@662683322:1644261459199" name="LANGUAGE_SELECTION_PE" type="Page Connector" width="193" x="1092" y="804">
+<page_connector target="Element@625965093:1644263484527">LANGUAGE_SELECTION_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1882664700:1644261459199" name="AGENT TRANSFER_PE" type="Page Connector" width="163" x="-238" y="601">
+<page_connector target="Element@1147398060:1644998301421">AGENT TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@533168262:1644261459199" name="AA_PRP_XX_MN_0001_PE" type="Page Entry" width="183" x="-239" y="321">
+<exit_states>
+<exit_state name="next" target="Element@658435688:1644261459197"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1063498900:1645625580240" name="Bundle_API_Check_BC" type="Decision" width="168" x="553" y="142">
+<exit_states>
+<exit_state name="APIHit" target="Element@895216467:1645625678454"/>
+<exit_state name="NoHit" target="Element@2087150067:1644261459199"/>
+</exit_states>
+</element>
+<element height="46" id="Element@895216467:1645625678454" name="Bundle_API_Hit_DB" type="Subflow Call" width="163" x="823" y="140">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644262358918">
+<config>
+<argument_data>
+<data name="HID">Bundle_Service_GetBundles</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1772485070:1646900315785"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1772485070:1646900315785" name="Bundle_API_Hit_BC" type="Decision" width="151" x="833" y="251">
+<exit_states>
+<exit_state name="Success" target="Element@2087150067:1644261459199"/>
+<exit_state name="Failure" target="Element@2087150067:1644261459199">
+<bendpoint>
+<dim1 x="-168" y="38"/>
+<dim2 x="124" y="37"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1377869842:1649143883607" name="APPLICATION_TRANSFER_CHECK_PE" type="Page Connector" width="244" x="204" y="501">
+<page_connector target="Element@1344071998:1649143768659">APPLICATION_TRANSFER_CHECK_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@409062577:1649143883607" name="ATC_Ret_PE" type="Page Entry" width="110" x="1097" y="-165">
+<exit_states>
+<exit_state name="next" target="Element@1111295632:1644261459199"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1734791965:1652773453875" name="CUST_TREATMENT_CHECK_BC" type="Decision" width="210" x="1086" y="696">
+<exit_states>
+<exit_state name="T1" target="Element@662683322:1644261459199"/>
+<exit_state name="T2" target="Element@662683322:1644261459199">
+<bendpoint>
+<dim1 x="77" y="48"/>
+<dim2 x="83" y="-56"/>
+</bendpoint>
+</exit_state>
+<exit_state name="T3" target="Element@40322340:1652773515058"/>
+</exit_states>
+</element>
+<element height="46" id="Element@40322340:1652773515058" name="AGENT TRANSFER_PE" type="Page Connector" width="163" x="849" y="794">
+<page_connector target="Element@1147398060:1644998301421">AGENT TRANSFER_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@440149029:1655115185111" name="WELCOME_MSG_SETTER" type="Action" width="179" x="1075" y="344">
+<exit_states>
+<exit_state name="done" target="Element@545028848:1661666591225"/>
+</exit_states>
+</element>
+<element height="46" id="Element@616308808:1655118216028" name="IS_PROMO_MSG_AVAIL_CHECK_BC" type="Decision" width="235" x="1064" y="582">
+<exit_states>
+<exit_state name="Y" target="Element@1052280804:1655118283095"/>
+<exit_state name="N" target="Element@1734791965:1652773453875"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1052280804:1655118283095" name="PROMOTIONAL_MSG_PP" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="182" x="808" y="642">
+<exit_states>
+<exit_state name="done" target="Element@1734791965:1652773453875"/>
+</exit_states>
+</element>
+<element height="46" id="Element@20973202:1655913344344" name="IS_BUNDLE_OUTBOUND_CHECK_BC" type="Decision" width="240" x="1046" y="265">
+<exit_states>
+<exit_state name="DataBundle" target="Element@1384878727:1655913925067"/>
+<exit_state name="WelMsg" target="Element@440149029:1655115185111"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1398539614:1655913515571" name="BUY_GIFT_DATA_BUNDLE_PE" type="Page Connector" width="200" x="1400" y="374">
+<page_connector target="Element@1196313888:1652463465730">BUY_GIFT_DATA_BUNDLE_PE<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1384878727:1655913925067" name="S_BUNDLE_VAR_ASSIGN" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="178" x="1400" y="276">
+<exit_states>
+<exit_state name="done" target="Element@1398539614:1655913515571"/>
+</exit_states>
+</element>
+<element height="46" id="Element@165219586:1659524716245" name="SET_AUTH_TOKEN4" type="Action" width="200" x="1057" y="94">
+<exit_states>
+<exit_state name="done" target="Element@1980038790:1659524716245"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1742209070:1659524716245" name="GET_KYC_AUTH_TOKEN4" type="Subflow Call" width="180" x="1062" y="-4">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644564160821">
+<config>
+<argument_data>
+<data name="HID">Get_Kyc_Token_Generation</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@165219586:1659524716245"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1980038790:1659524716245" name="AA_PRP1_XX_HA_0068_DB" type="Subflow Call" width="231" x="1053" y="179">
+<subflow_call subflow_name="HOST_INTEGRATION" target="Element@31:1644564160821">
+<config>
+<argument_data>
+<data name="HID">Get_KYC_Status</data>
+</argument_data>
+<input_data>
+<data name="S_ERROR_MSG"/>
+<data name="S_STATUS_CODE"/>
+<data name="S_ERROR_CODE"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@20973202:1655913344344"/>
+</exit_states>
+</element>
+<element height="46" id="Element@545028848:1661666591225" name="PREF_LANG_CHECK_BC" type="Decision" width="195" x="1070" y="411">
+<exit_states>
+<exit_state name="LANG_NAVL" target="Element@410287619:1644261459199"/>
+<exit_state name="LANG_AVL" target="Element@410287619:1644261459199">
+<bendpoint>
+<dim1 x="-177" y="36"/>
+<dim2 x="-184" y="-44"/>
+</bendpoint>
+</exit_state>
+<exit_state name="ER" target="Element@410287619:1644261459199">
+<bendpoint>
+<dim1 x="164" y="36"/>
+<dim2 x="157" y="-44"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

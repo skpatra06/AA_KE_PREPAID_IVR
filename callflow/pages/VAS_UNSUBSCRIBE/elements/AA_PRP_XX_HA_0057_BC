@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1761276580:1644474474551" name="AA_PRP_XX_HA_0057_BC" version="6.0.1">
+<config>
+<source type="Class">com.common.vas.Vas_Unsubscription_Details</source>
+</config>
+</decision>
